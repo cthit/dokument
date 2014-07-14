@@ -1,0 +1,33 @@
+\documentclass[11pt, includeaddress]{../classes/cthit}
+\usepackage{titlesec}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {../images/} }
+
+\newcommand{\updated}{2014--02--28}
+
+\title{Reglemente}
+\date{Uppdaterad \updated}
+
+\begin{document}
+
+\title{Titel här}
+\subtitle{Subtitel här}
+\approved{2001-08-23}
+\revisioned{2050-01-01}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+\input{example1.tex} % 1
+
+\end{document}
