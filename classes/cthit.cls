@@ -123,7 +123,7 @@
     \rfoot{%
       \begin{flushright}
         \href{mailto:styrit@chalmers.it}{styrit@chalmers.it}\\
-        \href{http://chalmers.it}{https://chalmers.it}
+        \href{https://chalmers.it}{https://chalmers.it}
       \end{flushright}
     }
   \fi
