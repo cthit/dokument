@@ -54,12 +54,12 @@
       \begin{center}
         \vspace*{0.5cm}
 
-        \Huge
-        \textbf{Titel}
-        
-        \LARGE
+                
+        {\bf\Huge \@title\par}
+  
         \vspace{0.2cm}
-        \@subtitle 
+        \ifdef{\@subtitle}{{\LARGE \@subtitle\par}}{}
+
         
         \vspace{0.2cm}
         
@@ -95,7 +95,7 @@
   }
   \newcommand{\headright}{%
     Sida \thepage\ av \pageref{LastPage}\\
-    \@date
+    Reviderad: \@revisioned 
   }
   
   % Calculate header height
