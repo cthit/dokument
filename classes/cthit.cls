@@ -10,13 +10,13 @@
 
 \ProcessOptions\relax
 
-\LoadClass[11pt]{article}
+\LoadClass[11pt, a4paper]{article}
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage{parskip}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
-\RequirePackage[swedish, english]{babel}
+\RequirePackage[swedish]{babel}
 \RequirePackage{lastpage}
 \RequirePackage[unicode]{hyperref}
 \RequirePackage[includeheadfoot, top=2.0cm, bottom=4cm]{geometry}
@@ -25,6 +25,8 @@
 
 \RequirePackage{pdfpages}
 
+\definecolor{linkblue}{HTML}{0000ee}
+
 \AtBeginDocument{
   \hypersetup{
     pdftitle = {\@title},
@@ -32,9 +34,27 @@
     colorlinks=true,
     citecolor=black,
     filecolor=black,
-    linkcolor=black,
-    urlcolor=black
+    linkcolor=black
   }
+}
+
+                        %mbox to prevent line-breaking on name
+\DeclareDocumentCommand \HUBBEN {}{\mbox{Hubben}}
+\DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
+\DeclareDocumentCommand \SEXIT {}{\mbox{\textsc{sex}IT}}
+\DeclareDocumentCommand \STYRIT {}{\mbox{styrIT}}
+\DeclareDocumentCommand \NOLLKIT {}{\mbox{NollKIT}}
+\DeclareDocumentCommand \DIGIT {}{\mbox{digIT}}
+\DeclareDocumentCommand \DRAWIT {}{\mbox{DrawIT}}
+\DeclareDocumentCommand \ARMIT {}{\mbox{ArmIT}}
+\DeclareDocumentCommand \SNIT {}{\mbox{snIT}}
+\DeclareDocumentCommand \FRITID {}{\mbox{frITid}}
+\DeclareDocumentCommand \EIGHTBIT {}{\mbox{8-bIT}}
+\DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
+\DeclareDocumentCommand \FANBAR {}{\mbox{FanbärerIT}}
+
+\DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
+  \href{#2}{\color{#1}{#3}}
 }
 
 \DeclareDocumentCommand \subtitle {m} {%
@@ -73,7 +93,8 @@
         
         \Large
         Antagen: \@approved \\
-        Reviderad: \@revisioned 
+        \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
+        
         
     \end{center}
 
@@ -95,7 +116,7 @@
   }
   \newcommand{\headright}{%
     Sida \thepage\ av \pageref{LastPage}\\
-    Reviderad: \@revisioned 
+    \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
   }
   
   % Calculate header height
