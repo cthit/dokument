@@ -1,3 +1,4 @@
+% Modified by Johan "Horv" Andersson
 % Original by Adam Sandberg Ericsson
 % https://github.com/dtekcth/dtek-tex/blob/master/dtek.cls
 
