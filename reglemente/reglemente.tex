@@ -1,0 +1,48 @@
+\documentclass[11pt, includeaddress]{../classes/cthit}
+\usepackage{titlesec}
+\usepackage[swedish]{babel}
+\usepackage{verbatimbox}
+\usepackage{titlesec}
+
+%\titleformat{\section}{\normalfont\Large\bfseries}{\S\thesection}{1em}{}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\renewcommand{\thesection}{\S \arabic{section}}
+%\renewcommand{\thesubsection}{{\S } \arabic{section}.\arabic{subsection} { }}
+%\renewcommand{\thesubsubsection}{{\S } \arabic{section}.\arabic{subsection}.\arabic{subsubsection} { }}
+
+
+
+
+\graphicspath{ {../images/} }
+
+\begin{document}
+
+\title{Reglemente}
+\approved{2003--01--27}
+\revisioned{2014--01--03}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+
+%Rubriksnivådjup
+\setcounter{tocdepth}{3}
+%Sidnumreringsstart
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+\input{sektionsmote.tex} % Sektionsmötet
+\newpage
+\input{valberedning.tex} % Valberedning
+\newpage
+\input{sektionsstyrelse.tex} % Sektionsstyrelsen
+
+\end{document}
+

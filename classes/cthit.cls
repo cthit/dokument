@@ -39,6 +39,12 @@
   }
 }
 
+\newenvironment{att}{ 
+  \begin{list}{\small{\textbf{att}}}{}
+}{
+  \end{list}
+}
+
                         %mbox to prevent line-breaking on name
 \DeclareDocumentCommand \HUBBEN {}{\mbox{Hubben}}
 \DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
