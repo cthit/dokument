@@ -58,7 +58,7 @@
 \DeclareDocumentCommand \FRITID {}{\mbox{frITid}}
 \DeclareDocumentCommand \EIGHTBIT {}{\mbox{8-bIT}}
 \DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
-\DeclareDocumentCommand \FANBAR {}{\mbox{FanbärerIT}}
+\DeclareDocumentCommand \FANBARERIT {}{\mbox{FanbärerIT}}
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}
