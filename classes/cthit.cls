@@ -45,20 +45,68 @@
   \end{list}
 }
 
-                        %mbox to prevent line-breaking on name
+ %mbox to prevent line-breaking on name
 \DeclareDocumentCommand \HUBBEN {}{\mbox{Hubben}}
+
 \DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
+\DeclareDocumentCommand \PRITFULL {}{
+  PR-föreningen och Rustmäasteriet Informationsteknik, \PRIT{}
+}
+
 \DeclareDocumentCommand \SEXIT {}{\mbox{\textsc{sex}IT}}
+\DeclareDocumentCommand \SEXITFULL {}{
+  Sexmästeriet Informationsteknik, \SEXIT{}
+}
+
 \DeclareDocumentCommand \STYRIT {}{\mbox{styrIT}}
+\DeclareDocumentCommand \STYRITFULL {}{
+  Sektionsstyrelsen, \STYRIT{}
+}
+
 \DeclareDocumentCommand \NOLLKIT {}{\mbox{NollKIT}}
+\DeclareDocumentCommand \NOLLKITFULL {}{
+  Mottagningskomittén Informationsteknik, \NOLLKIT{}
+}
+
 \DeclareDocumentCommand \DIGIT {}{\mbox{digIT}}
+\DeclareDocumentCommand \DIGITFULL {}{
+  Datorinformationsgruppen Informationsteknik, \DIGIT{}
+}
+
 \DeclareDocumentCommand \DRAWIT {}{\mbox{DrawIT}}
+\DeclareDocumentCommand \DRAWITFULL {}{
+  Analoga spelföreningen, \DRAWIT{}
+}
+
 \DeclareDocumentCommand \ARMIT {}{\mbox{ArmIT}}
+\DeclareDocumentCommand \ARMITFULL {}{
+  Arbetsmaknadsgruppen Informationsteknik, \ARMIT{}
+}
+
 \DeclareDocumentCommand \SNIT {}{\mbox{snIT}}
+\DeclareDocumentCommand \SNITFULL {}{
+  Studienämnden, \SNIT{}
+}
+
 \DeclareDocumentCommand \FRITID {}{\mbox{frITid}}
+\DeclareDocumentCommand \FRITIDFULL {}{
+  Idrottsföreningen Informationsteknik, \FRITID{}
+}
+
 \DeclareDocumentCommand \EIGHTBIT {}{\mbox{8-bIT}}
+\DeclareDocumentCommand \EIGHTBITFULL {}{
+  TV-spelsföreningen, \EIGHTBIT{}
+}
+
 \DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
+\DeclareDocumentCommand \HOOKIT {}{
+  Häfv- och odygdskommittén på IT-sektionen, \HOOKIT{}
+}
+
 \DeclareDocumentCommand \FANBARERIT {}{\mbox{FanbärerIT}}
+\DeclareDocumentCommand \FANBARERITFULL {}{
+  Fanbärarna Informationsteknik, \FANBARERIT{}
+}
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}
