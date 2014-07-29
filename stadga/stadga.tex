@@ -1,0 +1,73 @@
+\documentclass[11pt, includeaddress]{../classes/cthit}
+\usepackage{titlesec}
+\usepackage[swedish]{babel}
+\usepackage{verbatimbox}
+\usepackage{titlesec}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\renewcommand{\thesection}{\S \arabic{section}}
+
+\graphicspath{ {../images/} }
+
+\begin{document}
+
+\title{Stadga}
+\approved{2003--01--27}
+\revisioned{2014--05--06}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+
+%Rubriksnivådjup
+\setcounter{tocdepth}{2}
+%Sidnumreringsstart
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+\input{allmant.tex} % Allmänt
+\newpage
+\input{medlemmar.tex} % Medlemmar
+\newpage
+\input{organisation.tex} % Organisation
+\newpage
+\input{sektionsmote.tex} % Sektionsmötet
+\newpage
+\input{valberedning.tex} % Valberedning
+\newpage
+\input{sektionsstyrelse.tex} % Sektionsstyrelsen styrIT
+\newpage
+\input{studienamnd.tex} % Studienämnden, snIT
+\newpage
+\input{sektionskomitteer.tex} % Sektionskomittéer
+\newpage
+\input{intresseforeningar.tex} % Intresseföreningar
+\newpage
+\input{hedersmedlemmar.tex} % Hedersmedlemmar
+\newpage
+\input{skyddshelgon.tex} % Skyddshelgon och sektionsfärg
+\newpage
+\input{protokoll.tex} % Protokoll och anslagning
+\newpage
+\input{revision.tex} % Revision och ansvarsfrihet
+\newpage
+\input{avgifter.tex} % Avgifter
+\newpage
+\input{upplosning.tex} % Upplösning av sektionen
+\newpage
+\input{inspektor.tex} % Inspektor
+\newpage
+\input{andring.tex} % Ändring- och tolkningsfrågor
+\newpage
+\input{forkortningar.tex} % Förkortningar
+
+
+\end{document}
+
