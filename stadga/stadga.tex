@@ -3,11 +3,16 @@
 \usepackage[swedish]{babel}
 \usepackage{verbatimbox}
 \usepackage{titlesec}
+\usepackage{titletoc}
 
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
 
-\renewcommand{\thesection}{\S \arabic{section}}
+%\titleformat{\section}{\normalfont\Large\bfseries}{\S\thesection}{1em}{}
+
+%\contentslabel[\S \thecontentslabel]{2em}
+\titlelabel{\S \thetitle\quad}
+%\renewcommand{\thesection}{\S \arabic{section}}
 
 \graphicspath{ {../images/} }
 
