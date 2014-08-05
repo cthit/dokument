@@ -50,7 +50,7 @@
 
 \DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
 \DeclareDocumentCommand \PRITFULL {}{
-  PR-föreningen och Rustmäasteriet Informationsteknik, \PRIT{}
+  PR-föreningen och Rustmästeriet Informationsteknik, \PRIT{}
 }
 
 \DeclareDocumentCommand \SEXIT {}{\mbox{\textsc{sex}IT}}
@@ -99,7 +99,7 @@
 }
 
 \DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
-\DeclareDocumentCommand \HOOKIT {}{
+\DeclareDocumentCommand \HOOKITFULL {}{
   Häfv- och odygdskommittén på IT-sektionen, \HOOKIT{}
 }
 
