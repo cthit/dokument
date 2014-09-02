@@ -1,4 +1,4 @@
-\documentclass[11pt, includeaddress]{../classes/cthit}
+\documentclass[11pt, includeaddress]{../../classes/cthit}
 \usepackage{titlesec}
 \usepackage{verbatimbox}
 \usepackage{tabularx}
@@ -6,7 +6,7 @@
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
 
-\graphicspath{ {../images/} }
+\graphicspath{ {../../images/} }
 
 \begin{document}
 
@@ -43,8 +43,10 @@ Mail: \line(1,0){258}
 \setlength{\extrarowheight}{12pt}
 \section*{Budget}
 \begin{tabular}{ | p{12cm} | p{3cm} |}
-	\hline                       
-	\large{\textbf{Artikel}} & \large{\textbf{Utgift}} \\
+	\multicolumn{1}{l}{\large{\textbf{Artikel}}} & \multicolumn{1}{l}{\large{\textbf{Utgift}}} \\
+	%\multicolumn{1}{c}{} & \multicolumn{1}{c}{00} \\
+	%
+	%\large{\textbf{Artikel}} & \large{\textbf{Utgift}} \\
 	\hline
 	{} & {} \\
 	\hline
