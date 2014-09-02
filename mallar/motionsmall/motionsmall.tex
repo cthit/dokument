@@ -1,0 +1,30 @@
+\documentclass[11pt, noincludeaddress, nopagination]{../../classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {../../images/} }
+
+\begin{document}
+
+\title{Motion om <ämne>}
+\authors{Emilia Johansson, Emil Andersson}
+
+\makeheadfoot%
+
+\makesimpletitle
+
+\subsection*{Bakgrund}
+En text som beskriver bakgrunden till att motionen lyfts. Av vilken anledning ska sektionsmötet bifalla de ändringar som förelås senare etc.
+
+\subsection*{Förslag}
+Yrkar på:
+\begin{att}
+	\item Paragraf X ändras till Y
+	\item Den reviderade ekonomiska policyn ska antas till sektionens dokument enligt bilaga.
+\end{att}
+
+\end{document}

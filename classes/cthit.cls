@@ -9,6 +9,14 @@
 \includeaddresstrue
 \DeclareOption{noincludeaddress}{\includeaddressfalse}
 
+\newif\ifincludeauthors
+\includeauthorstrue
+\DeclareOption{noincludeauthors}{\includeaddressfalse}
+
+\newif\ifpagination
+\paginationtrue
+\DeclareOption{nopagination}{\paginationfalse}
+
 \ProcessOptions\relax
 
 \LoadClass[11pt, a4paper]{article}
@@ -124,6 +132,10 @@
   \DeclareDocumentCommand \@revisioned {}{#1}
 }
 
+\DeclareDocumentCommand \authors {m} {%
+  \DeclareDocumentCommand \@authors {}{#1}
+}
+
 \DeclareDocumentCommand \maketitle {} {%
   
       \begin{center}
@@ -135,7 +147,6 @@
         \vspace{0.2cm}
         \ifdef{\@subtitle}{{\LARGE \@subtitle\par}}{}
 
-        
         \vspace{0.2cm}
         
         \textbf{Teknologsektionen Informationsteknik} \\
@@ -147,12 +158,37 @@
         \vspace{2cm}
         
         \Large
-        Antagen: \@approved \\
+
+        \ifincludeauthors
+          \ifdef{\@authors}{{\@authors}}{}
+          \vspace{2cm}
+        \fi
+        
+        \ifdef{\@approved}{{Antagen: \@approved \\}}{}
         \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
         
         
     \end{center}
+}
 
+
+\DeclareDocumentCommand \makesimpletitle {} {%
+  
+    \begin{center}
+        \vspace*{0.5cm}
+
+                
+        {\bf\Huge \@title\par}
+  
+        \vspace{0.2cm}
+        \ifdef{\@subtitle}{{\LARGE \@subtitle\par}}{}
+
+        \ifincludeauthors
+          \ifdef{\@authors}{{\Large\@authors}}{}
+          \vspace{2cm}
+        \fi
+
+    \end{center}
 }
 
 % Set up headers
@@ -169,8 +205,11 @@
       \@title
     }
   }
+
   \newcommand{\headright}{%
-    Sida \thepage\ av \pageref{LastPage}\\
+    \ifpagination
+      Sida \thepage\ av \pageref{LastPage}\\
+    \fi
     \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
   }
   
@@ -179,7 +218,9 @@
   \addtolength\headheight{1.0pt}
   
   \lhead{\headleft}
-  \rhead{\headright}
+
+    \rhead{\headright}
+
   
   \renewcommand{\headrule}{
     \nointerlineskip
