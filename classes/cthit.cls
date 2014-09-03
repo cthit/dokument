@@ -57,62 +57,62 @@
 \DeclareDocumentCommand \HUBBEN {}{\mbox{Hubben}}
 
 \DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
-\DeclareDocumentCommand \PRITFULL {}{
+\DeclareDocumentCommand \PRITFULL {}{%
   PR-föreningen och Rustmästeriet Informationsteknik, \PRIT{}
 }
 
 \DeclareDocumentCommand \SEXIT {}{\mbox{\textsc{sex}IT}}
-\DeclareDocumentCommand \SEXITFULL {}{
+\DeclareDocumentCommand \SEXITFULL {}{%
   Sexmästeriet Informationsteknik, \SEXIT{}
 }
 
 \DeclareDocumentCommand \STYRIT {}{\mbox{styrIT}}
-\DeclareDocumentCommand \STYRITFULL {}{
+\DeclareDocumentCommand \STYRITFULL {}{%
   Sektionsstyrelsen, \STYRIT{}
 }
 
 \DeclareDocumentCommand \NOLLKIT {}{\mbox{NollKIT}}
-\DeclareDocumentCommand \NOLLKITFULL {}{
+\DeclareDocumentCommand \NOLLKITFULL {}{%
   Mottagningskomittén Informationsteknik, \NOLLKIT{}
 }
 
 \DeclareDocumentCommand \DIGIT {}{\mbox{digIT}}
-\DeclareDocumentCommand \DIGITFULL {}{
+\DeclareDocumentCommand \DIGITFULL {}{%
   Datorinformationsgruppen Informationsteknik, \DIGIT{}
 }
 
 \DeclareDocumentCommand \DRAWIT {}{\mbox{DrawIT}}
-\DeclareDocumentCommand \DRAWITFULL {}{
+\DeclareDocumentCommand \DRAWITFULL {}{%
   Analoga spelföreningen, \DRAWIT{}
 }
 
 \DeclareDocumentCommand \ARMIT {}{\mbox{ArmIT}}
-\DeclareDocumentCommand \ARMITFULL {}{
+\DeclareDocumentCommand \ARMITFULL {}{%
   Arbetsmaknadsgruppen Informationsteknik, \ARMIT{}
 }
 
 \DeclareDocumentCommand \SNIT {}{\mbox{snIT}}
-\DeclareDocumentCommand \SNITFULL {}{
+\DeclareDocumentCommand \SNITFULL {}{%
   Studienämnden, \SNIT{}
 }
 
 \DeclareDocumentCommand \FRITID {}{\mbox{frITid}}
-\DeclareDocumentCommand \FRITIDFULL {}{
+\DeclareDocumentCommand \FRITIDFULL {}{%
   Idrottsföreningen Informationsteknik, \FRITID{}
 }
 
 \DeclareDocumentCommand \EIGHTBIT {}{\mbox{8-bIT}}
-\DeclareDocumentCommand \EIGHTBITFULL {}{
+\DeclareDocumentCommand \EIGHTBITFULL {}{%
   TV-spelsföreningen, \EIGHTBIT{}
 }
 
 \DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
-\DeclareDocumentCommand \HOOKITFULL {}{
+\DeclareDocumentCommand \HOOKITFULL {}{%
   Häfv- och odygdskommittén på IT-sektionen, \HOOKIT{}
 }
 
 \DeclareDocumentCommand \FANBARERIT {}{\mbox{FanbärerIT}}
-\DeclareDocumentCommand \FANBARERITFULL {}{
+\DeclareDocumentCommand \FANBARERITFULL {}{%
   Fanbärarna Informationsteknik, \FANBARERIT{}
 }
 
