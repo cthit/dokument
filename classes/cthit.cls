@@ -58,42 +58,42 @@
 
 \DeclareDocumentCommand \PRIT {}{\mbox{P.R.I.T.}}
 \DeclareDocumentCommand \PRITFULL {}{%
-  PR-föreningen och Rustmästeriet Informationsteknik, \PRIT{}
+  PR-föreningen och Rustmästeriet Informationsteknik, \PRIT{}%
 }
 
 \DeclareDocumentCommand \SEXIT {}{\mbox{\textsc{sex}IT}}
 \DeclareDocumentCommand \SEXITFULL {}{%
-  Sexmästeriet Informationsteknik, \SEXIT{}
+  Sexmästeriet Informationsteknik, \SEXIT{}%
 }
 
 \DeclareDocumentCommand \STYRIT {}{\mbox{styrIT}}
 \DeclareDocumentCommand \STYRITFULL {}{%
-  Sektionsstyrelsen, \STYRIT{}
+  Sektionsstyrelsen, \STYRIT{}%
 }
 
 \DeclareDocumentCommand \NOLLKIT {}{\mbox{NollKIT}}
 \DeclareDocumentCommand \NOLLKITFULL {}{%
-  Mottagningskomittén Informationsteknik, \NOLLKIT{}
+  Mottagningskomittén Informationsteknik, \NOLLKIT{}%
 }
 
 \DeclareDocumentCommand \DIGIT {}{\mbox{digIT}}
 \DeclareDocumentCommand \DIGITFULL {}{%
-  Datorinformationsgruppen Informationsteknik, \DIGIT{}
+  Datorinformationsgruppen Informationsteknik, \DIGIT{}%
 }
 
 \DeclareDocumentCommand \DRAWIT {}{\mbox{DrawIT}}
 \DeclareDocumentCommand \DRAWITFULL {}{%
-  Analoga spelföreningen, \DRAWIT{}
+  Analoga spelföreningen, \DRAWIT{}%
 }
 
 \DeclareDocumentCommand \ARMIT {}{\mbox{ArmIT}}
 \DeclareDocumentCommand \ARMITFULL {}{%
-  Arbetsmaknadsgruppen Informationsteknik, \ARMIT{}
+  Arbetsmaknadsgruppen Informationsteknik, \ARMIT{}%
 }
 
 \DeclareDocumentCommand \SNIT {}{\mbox{snIT}}
 \DeclareDocumentCommand \SNITFULL {}{%
-  Studienämnden, \SNIT{}
+  Studienämnden, \SNIT{}%
 }
 
 \DeclareDocumentCommand \FRITID {}{\mbox{frITid}}
@@ -103,17 +103,17 @@
 
 \DeclareDocumentCommand \EIGHTBIT {}{\mbox{8-bIT}}
 \DeclareDocumentCommand \EIGHTBITFULL {}{%
-  TV-spelsföreningen, \EIGHTBIT{}
+  TV-spelsföreningen, \EIGHTBIT{}%
 }
 
 \DeclareDocumentCommand \HOOKIT {}{\mbox{HookIT}}
 \DeclareDocumentCommand \HOOKITFULL {}{%
-  Häfv- och odygdskommittén på IT-sektionen, \HOOKIT{}
+  Häfv- och odygdskommittén på IT-sektionen, \HOOKIT{}%
 }
 
 \DeclareDocumentCommand \FANBARERIT {}{\mbox{FanbärerIT}}
 \DeclareDocumentCommand \FANBARERITFULL {}{%
-  Fanbärarna Informationsteknik, \FANBARERIT{}
+  Fanbärarna Informationsteknik, \FANBARERIT{}%
 }
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
