@@ -117,7 +117,7 @@
 }
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
-  \href{#2}{\color{#1}{#3}}
+  \href{#2}{\color{#1}{#3}}%
 }
 
 \DeclareDocumentCommand \subtitle {m} {%
@@ -130,6 +130,10 @@
 
 \DeclareDocumentCommand \revisioned {m} {%
   \DeclareDocumentCommand \@revisioned {}{#1}
+}
+
+\DeclareDocumentCommand \editorial {m} {%
+  \DeclareDocumentCommand \@editorial {}{#1}
 }
 
 \DeclareDocumentCommand \authors {m} {%
@@ -166,6 +170,7 @@
         
         \ifdef{\@approved}{{Antagen: \@approved \\}}{}
         \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
+        \ifdef{\@editorial}{{Redaktionell revidering: \@editorial}}{}
         
         
     \end{center}

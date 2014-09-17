@@ -1,0 +1,41 @@
+\documentclass[11pt, includeaddress]{../../classes/cthit}
+\usepackage{titlesec}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {../../images/} }
+
+\begin{document}
+
+\title{Mjukvarupolicy}
+\approved{2014--09--10}
+\editorial{2014--09--17}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+
+%Rubriksnivådjup
+\setcounter{tocdepth}{2}
+%Sidnumreringsstart
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+\section{Syfte}
+Denna policy syftar till att dels IT-studenten ska ha möjlighet att få ta del av mjukvaran som sektionen utvecklar och dels att sektionens arbete kan underlättas då gemene teknolog kan hitta fel i koden och ge förslag till förbättringar (i så kallade pull-requests). Utöver detta bör utvecklandet av ny mjukvara i första hand ges till sektionens medlemmar så de kan få nyttig utvecklarerfarenhet.
+
+\section{Införskaffande}
+För mjukvara avsedd att utvecklas och/eller användas i sektionens namn gäller:
+\begin{enumerate}
+	\item Alla mjukvaruprojekt utvecklade ska vara  ``open source'', enl def. av Open Source Initiative, \MYhref{http://opensource.org/definition}{http://opensource.org/definition}, och därav publikt tillgänglig för läsning, kopiering och modifiering bl.a. 
+	\item Vid införskaffande av mjukvara ska ett open source-alternativ användas i första hand istället för proprietär mjukvara
+ 	\item Mjukvara som behöver utvecklas ska i första hand utvecklas internt, dvs att någon på sektionen får jobbet att utveckla den istället för att beställa jobbet från utomstående part.
+\end{enumerate}
+
+\end{document}
