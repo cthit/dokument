@@ -155,7 +155,7 @@
         
         \textbf{Teknologsektionen Informationsteknik} \\
         \Large
-        \textbf{Chalmers Tekniska Högskola}
+        \textbf{Chalmers tekniska högskola}
 
         \vspace{2cm}
         \centerline{ \includegraphics[width=0.5\textwidth]{itlogo.eps}}
