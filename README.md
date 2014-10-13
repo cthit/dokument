@@ -1,4 +1,4 @@
 dokument
 ========
 
-Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola
+Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola
