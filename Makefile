@@ -14,7 +14,7 @@ copydir=../
 all: verksamhetsplaner reglemente policies stadga mallar
 
 verksamhetsplaner: verksamhetsplaner/
-	$(latexmk) $<styrit.tex
+	$(latexmk) $<styrit14.tex
 	# Example of -outdir override
 	#$(latexmk) -outdir=$(builddir)/$@/styrit_override $<styrit.tex
 
