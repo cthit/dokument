@@ -9,7 +9,7 @@ builddir=build
 # in the individual targets.
 latexmk=latexmk -outdir=$(builddir)/$@ -f -quiet -silent -pdf -xelatex -use-make-
 # The dir that the finished pdfs should be copied into. Relative to this filek
-copydir=../test
+copydir=../
 
 all: verksamhetsplaner reglemente policies stadga mallar
 
