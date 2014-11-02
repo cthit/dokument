@@ -1,4 +1,4 @@
-.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar
+.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar flashit
 
 # Note: the $< variable is the 1st "argument" to the target while
 # $@ is the target.
