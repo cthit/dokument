@@ -116,6 +116,11 @@
   Fanbärarna Informationsteknik, \FANBARERIT{}%
 }
 
+\DeclareDocumentCommand \FLASHIT {}{\mbox{FlashIT}}
+\DeclareDocumentCommand \FLASHITFULL {}{%
+  Film- och fotoföreningen på IT-sektionen, \FLASHIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
