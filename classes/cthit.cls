@@ -118,7 +118,7 @@
 
 \DeclareDocumentCommand \FLASHIT {}{\mbox{FlashIT}}
 \DeclareDocumentCommand \FLASHITFULL {}{%
-  Film- och fotoföreningen på IT-sektionen, \FLASHIT{}%
+  Film- och fotoföreningen Informationsteknik, \FLASHIT{}%
 }
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
