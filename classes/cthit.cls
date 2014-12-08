@@ -243,7 +243,7 @@
   
     \lfoot{%
       \flushleft Teknologsektionen Informationsteknik\\
-      Hörsalsvägen 6\\
+      Hörsalsvägen 9\\
       412 58 Göteborg
     }
     
