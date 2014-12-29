@@ -4,19 +4,32 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 
+\usepackage{pgfkeys}
+
+% Set up the keys.  Only the ones directly under /mytextfield
+% can be accepted as options to the \mytextfield macro.
+\pgfkeys{
+ /mytextfield/.is family, /mytextfield,
+ % Here are the options that a user can pass
+ default/.style = 
+  {borderwidth = 0, dotwidth = 2cm, name=herp},
+ borderwidth/.estore in = \mytextfieldBorderwidth,
+ dotwidth/.estore in = \mytextfieldDotwidth,
+ name/.estore in = \mytextfieldName,
+}
+
 \newdimen\longline
 \longline=\textwidth\advance\longline-6cm
-
 \def\LayoutTextField#1#2{#2} % override default in hyperref
 
-\def\lbl#1{\hbox to 2cm{#1\dotfill\strut}}%
-\def\lbll#1{\hbox to 5cm{#1\dotfill\strut}}%
-\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=#1,width=#2, borderwidth=0]{\null}}\kern2pt\hrule}}
-\def\labellinel#1#2{\lbll{#1}\vbox{\hbox{\TextField[name=#1,width=#2, borderwidth=0]{\null}}\kern2pt\hrule}}
+\def\lbl#1{\hbox to \mytextfieldDotwidth{#1\dotfill\strut}}%
+\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=\mytextfieldName,width=#2, borderwidth=\mytextfieldBorderwidth]{\null}}\kern2pt\hrule}}
 
-\def\q#1{\hbox to \hsize{\labelline{#1}{\longline}}\vskip1.4ex}
-\def\ql#1{\hbox to \hsize{\labellinel{#1}{\longline}}\vskip1.4ex}
-
+% We process the options first, then pass them to `\parbox` in the form of macros.
+\newcommand\mytextfield[2][]{%
+ \pgfkeys{/mytextfield, default, #1}%
+ \hbox to \hsize{\labelline{#2}{\longline}}\vskip1.4ex
+}
 
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
@@ -32,18 +45,13 @@
 
 \section*{Sökande}
 För- och efternamn på den sökande eller kommitté-/föreningsnamn om äskningen kommer från ett organ inom sektionen. \\[14pt]
-%\TextField[bordercolor=black]{Namn:} \\
-\q{Namn:}
+\mytextfield[name=namn1]{Namn:}
 
 \section*{Ansvarig för äskningen}
 
-\q{Namn:}
-\q{Telefon:}
-\q{Mail:}
-
-%\TextField[bordercolor=black]{Namn:} \\
-%\TextField[bordercolor=black]{Telefon:}\\ 
-%\TextField[bordercolor=black]{Mail:}\\
+\mytextfield[name=namn2]{Namn:}
+\mytextfield[name=tel]{Telefon:}
+\mytextfield[name=mail]{Mail:}
 
 \section*{Motivering}
 \TextField[multiline,width=\textwidth,height=11cm,bordercolor=black]{\mbox{ }}
@@ -55,34 +63,34 @@ För- och efternamn på den sökande eller kommitté-/föreningsnamn om äskning
 \begin{tabular}{ | p{12cm} | p{3cm} |}
 	\multicolumn{1}{l}{\large{\textbf{Artikel}}} & \multicolumn{1}{l}{\large{\textbf{Utgift}}} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art1, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug1, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art2, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug2, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art3, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug3, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art4, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug4, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art5, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug5, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art6, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug6, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art7, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug7, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art8, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug8, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
+	{\TextField[name=art9, borderwidth=0,width=12cm]{ }} & {\TextField[name=bug9, borderwidth=0,width=3cm]{ }} \\
 	\hline
-	\multicolumn{1}{r|}{ \large{\textbf{Total:}} } & \TextField[borderwidth=0,width=3cm]{ }\\ \cline{2-2}
+	\multicolumn{1}{r|}{ \large{\textbf{Total:}} } & \TextField[name=total, borderwidth=0,width=3cm]{ }\\ \cline{2-2}
 
 
 \end{tabular}
 
 \vspace{2cm}
 
-\ql{Ort och datum:}
-\ql{Signatur firmatecknare:}
-\ql{Namnförtydligande:}
+\mytextfield[name=ort, dotwidth=5cm]{Ort och datum:}
+\mytextfield[name=sig, dotwidth=5cm]{Signatur firmatecknare:}
+\mytextfield[name=fort, dotwidth=5cm]{Namnförtydligande:}
 
  \end{Form}
 \end{document}
