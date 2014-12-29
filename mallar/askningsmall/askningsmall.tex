@@ -2,6 +2,21 @@
 \usepackage{titlesec}
 \usepackage{verbatimbox}
 \usepackage{tabularx}
+\usepackage{hyperref}
+
+\newdimen\longline
+\longline=\textwidth\advance\longline-6cm
+
+\def\LayoutTextField#1#2{#2} % override default in hyperref
+
+\def\lbl#1{\hbox to 2cm{#1\dotfill\strut}}%
+\def\lbll#1{\hbox to 5cm{#1\dotfill\strut}}%
+\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=#1,width=#2, borderwidth=0]{\null}}\kern2pt\hrule}}
+\def\labellinel#1#2{\lbll{#1}\vbox{\hbox{\TextField[name=#1,width=#2, borderwidth=0]{\null}}\kern2pt\hrule}}
+
+\def\q#1{\hbox to \hsize{\labelline{#1}{\longline}}\vskip1.4ex}
+\def\ql#1{\hbox to \hsize{\labellinel{#1}{\longline}}\vskip1.4ex}
+
 
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
@@ -9,6 +24,7 @@
 \graphicspath{ {images/} }
 
 \begin{document}
+  \begin{Form}
 
 \title{Äskningsansökan}
 
@@ -16,27 +32,21 @@
 
 \section*{Sökande}
 För- och efternamn på den sökande eller kommitté-/föreningsnamn om äskningen kommer från ett organ inom sektionen. \\[14pt]
-Namn: \line(1,0){250} 
+%\TextField[bordercolor=black]{Namn:} \\
+\q{Namn:}
 
 \section*{Ansvarig för äskningen}
 
-Namn: \line(1,0){250} \\[14pt]
-Telefon: \line(1,0){245} \\[14pt]
-Mail: \line(1,0){258}
+\q{Namn:}
+\q{Telefon:}
+\q{Mail:}
+
+%\TextField[bordercolor=black]{Namn:} \\
+%\TextField[bordercolor=black]{Telefon:}\\ 
+%\TextField[bordercolor=black]{Mail:}\\
 
 \section*{Motivering}
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
-\line(1,0){400} \\[14pt]
+\TextField[multiline,width=\textwidth,height=11cm,bordercolor=black]{\mbox{ }}
 
 \newpage
 
@@ -45,34 +55,34 @@ Mail: \line(1,0){258}
 \begin{tabular}{ | p{12cm} | p{3cm} |}
 	\multicolumn{1}{l}{\large{\textbf{Artikel}}} & \multicolumn{1}{l}{\large{\textbf{Utgift}}} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	{} & {} \\
+	{\TextField[borderwidth=0,width=12cm]{ }} & {\TextField[borderwidth=0,width=3cm]{ }} \\
 	\hline
-	\multicolumn{1}{r|}{ \large{\textbf{Total:}} } & \\ \cline{2-2}
+	\multicolumn{1}{r|}{ \large{\textbf{Total:}} } & \TextField[borderwidth=0,width=3cm]{ }\\ \cline{2-2}
 
 
 \end{tabular}
 
 \vspace{2cm}
 
-Ort och datum: \line(1,0){287} \\[14pt]
-Signatur firmatecknare: \line(1,0){250} \\[14pt]
-Namnförtydligande: \line(1,0){267} \\[14pt]
+\ql{Ort och datum:}
+\ql{Signatur firmatecknare:}
+\ql{Namnförtydligande:}
 
-
+ \end{Form}
 \end{document}
