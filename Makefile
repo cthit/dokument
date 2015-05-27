@@ -1,4 +1,4 @@
-.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar flashit
+.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar flashit ordlista
 
 # Note: the $< variable is the 1st "argument" to the target while
 # $@ is the target.
@@ -36,6 +36,9 @@ flashit: flashit/flashit_stadga.tex
 mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
+
+ordlista: ordlista.tex
+	$(latexmk) $<
 
 copy:
 	rsync -a $(builddir)/ $(copydir) --include "*.pdf" --include "*/" --exclude "*"
