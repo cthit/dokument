@@ -1,0 +1,277 @@
+\documentclass[8pt, includeaddress]{classes/cthit}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\usepackage{pgfkeys}
+
+\geometry{a4paper, portrait, left=0.5cm, right=0.5cm}
+
+% Set up the keys.  Only the ones directly under /mytextfield
+% can be accepted as options to the \mytextfield macro.
+\pgfkeys{
+ /mytextfield/.is family, /mytextfield,
+ % Here are the options that a user can pass
+ default/.style = 
+  {borderwidth = 0, dotwidth = 3cm, name=herp},
+ borderwidth/.estore in = \mytextfieldBorderwidth,
+ dotwidth/.estore in = \mytextfieldDotwidth,
+ name/.estore in = \mytextfieldName,
+}
+
+\newdimen\longline
+\longline=\textwidth\advance\longline-6cm
+\def\LayoutTextField#1#2{#2} % override default in hyperref
+
+\def\lbl#1{\hbox to \mytextfieldDotwidth{#1\dotfill\strut}}%
+\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=\mytextfieldName,width=#2, borderwidth=\mytextfieldBorderwidth]{\null}}\kern2pt\hrule}}
+
+% We process the options first, then pass them to `\parbox` in the form of macros.
+\newcommand\mytextfield[2][]{%
+ \pgfkeys{/mytextfield, default, #1}%
+ \hbox to \hsize{\labelline{#2}{\longline}}\vskip1.4ex
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{1ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\title{Deltagarlista}
+\makeheadfoot%
+
+\begin{document}
+  \begin{Form}
+
+\section*{}
+\mytextfield[name=namn1]{Datum:}{}
+\mytextfield[name=namn2]{Arrangemang:}
+\mytextfield[name=namn3]{Antal:}
+
+\setlength{\extrarowheight}{12pt}
+
+\begin{tabular}{ | p{0.5cm} | p{8cm} | p{4cm} | p{3cm} |}
+	\multicolumn{1}{l}{\large{\textbf{}}} & 
+	\multicolumn{1}{l}{\large{\textbf{Namn}}} & 
+	\multicolumn{1}{l}{\large{\textbf{Medlemskap}}} & \multicolumn{1}{l}{\large{\textbf{Kommentar}}}\\
+	\hline
+	{1} &
+	{\TextField[name=art1, borderwidth=0,width=8cm]{ }} & 
+	{\TextField[name=medlem1, borderwidth=0,width=4cm]{ }} & 
+	{\TextField[name=comment, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{2} &
+	{\TextField[name=art2, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem2, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{3} &
+	{\TextField[name=art3, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem3, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment3, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{4} &
+	{\TextField[name=art4, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem4, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment4, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{5} &
+	{\TextField[name=art5, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem5, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment5, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{6} &
+	{\TextField[name=art6, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem6, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment6, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{7} &
+	{\TextField[name=art7, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem7, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment7, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{8} &
+	{\TextField[name=art8, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem8, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment8, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{9} &
+	{\TextField[name=art9, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem9, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment9, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{10} &
+	{\TextField[name=art10, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem10, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment10, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{11} &
+	{\TextField[name=art11, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem11, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment11, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{12} &
+	{\TextField[name=art12, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem12, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment12, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{13} &
+	{\TextField[name=art13, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem13, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment13, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{14} &
+	{\TextField[name=art14, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem14, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment14, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{15} &
+	{\TextField[name=art15, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem15, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment15, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{16} &
+	{\TextField[name=art16, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem16, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment16, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{17} &
+	{\TextField[name=art17, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem17, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment17, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{18} &
+	{\TextField[name=art18, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem18, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment18, borderwidth=0,width=3cm]{ }} \\
+	\hline %%%
+\end{tabular}
+
+\begin{tabular}{ | p{0.5cm} | p{8cm} | p{4cm} | p{3cm} |}
+	\hline
+	{19} &
+	{\TextField[name=art19, borderwidth=0,width=8cm]{ }} & 
+	{\TextField[name=medlem19, borderwidth=0,width=4cm]{ }} & 
+	{\TextField[name=comment19, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{20} &
+	{\TextField[name=art20, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem20, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment20, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{21} &
+	{\TextField[name=art21, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem21, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment21, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{22} &
+	{\TextField[name=art22, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem22, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment22, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{23} &
+	{\TextField[name=art23, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem23, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment23, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{24} &
+	{\TextField[name=art24, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem24, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment24, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{25} &
+	{\TextField[name=art25, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem25, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment25, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{26} &
+	{\TextField[name=art26, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem26, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment26, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{27} &
+	{\TextField[name=art27, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem27, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment27, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{28} &
+	{\TextField[name=art28, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem28, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment28, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{29} &
+	{\TextField[name=art29, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem29, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment29, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{30} &
+	{\TextField[name=art30, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem30, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment30, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{31} &
+	{\TextField[name=art31, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem31, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment31, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{32} &
+	{\TextField[name=art32, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem32, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment32, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{33} &
+	{\TextField[name=art33, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem33, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment33, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{34} &
+	{\TextField[name=art34, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem34, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment34, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{35} &
+	{\TextField[name=art35, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem35, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment35, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{36} &
+	{\TextField[name=art36, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem36, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment36, borderwidth=0,width=3cm]{ }} \\
+	\hline 
+	{37} &
+	{\TextField[name=art37, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem37, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment37, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{38} &
+	{\TextField[name=art38, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem38, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment38, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{39} &
+	{\TextField[name=art39, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem39, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment39, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{40} &
+	{\TextField[name=art40, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem40, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment40, borderwidth=0,width=3cm]{ }} \\
+	\hline 
+	{41} &
+	{\TextField[name=art41, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem41, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment41, borderwidth=0,width=3cm]{ }} \\
+	\hline
+	{42} &
+	{\TextField[name=art42, borderwidth=0,width=8cm]{ }} &
+	{\TextField[name=medlem42, borderwidth=0,width=4cm]{ }} &
+	{\TextField[name=comment42, borderwidth=0,width=3cm]{ }} \\
+	\hline 
+\end{tabular}
+
+ \end{Form}
+\end{document}

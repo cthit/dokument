@@ -37,6 +37,7 @@ mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
 	$(latexmk) $<intygsmall/intygsmall.tex
+	$(latexmk) $<deltagarlista/deltagarlista.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
