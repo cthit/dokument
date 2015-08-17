@@ -1,0 +1,64 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Arbetsintyg}
+
+\makeheadfoot%
+
+\makesimpletitle
+
+\subsection*{}
+Intyg att <Emilia Emilsson> har medverkat som <Post> i <FKIT-organ> för Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola under perioden <åååå-mm-dd> till och med <åååå-mm-dd> På Chalmers Tekniska Högskola har en teknologsektion ansvar för att samtliga teknologer skall få ut det allra bästa av sin studietid, både utbildningsmässigt och vid sidan av studierna. För att åstadkomma detta har Teknologsektionen Informationsteknik ett flertal olika ideella föreningar som jobbar för att tiden på Chalmers skall bli den allra bästa. 
+
+\vspace{5cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Wolfgang Ahrendt}{Head of Informationsteknik}{Chalmers Tekniska Högskola}{}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+  \vspace{1cm}
+  \noindent
+
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Gabriel Andersson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  
+  \end{minipage}
+
+
+\end{document}

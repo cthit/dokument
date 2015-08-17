@@ -36,6 +36,7 @@ flashit: flashit/flashit_stadga.tex
 mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
+	$(latexmk) $<intygsmall/intygsmall.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
