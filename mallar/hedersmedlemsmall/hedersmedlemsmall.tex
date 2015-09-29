@@ -1,0 +1,62 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Hedersmedlemskapsdiplom}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Anette Järelöw}}
+\end{center}
+\vspace{1cm}
+\subsection*{}
+Intyg att Anette Järelöw har utnämnts till hedersmedlem hos Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola datumet 2015-09-04 med motiveringen: 
+\\
+\\
+\textit{
+``Anette väljs till hedersmedlem av sektionen för sina extraordinära insatser under sektionens första 15 år där hon i rollen som studievägledare coachat och hjälpt ett enormt antal studenter. Hon har visat ett engagemang som sträckt sig långt över vad som kan väntas från sin yrkesroll. Med en positiv inställning har hon alltid haft studenternas intressen nära hjärtat och ständigt uppmuntrat och berömt vårt engagemang. Om IT-sektionen skulle haft en mamma hade det solklart varit Anette.''
+}
+\\
+
+En hedersmedlem är en person som synnerligen främjat teknologsektionens intressen och strävanden. Hos Teknologsektionen Informationsteknik har endast en tidigare person utnämnts till hedersmedlem under sektionens hela 15 år.
+
+\vspace{4cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Gabriel Andersson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+\end{document}
