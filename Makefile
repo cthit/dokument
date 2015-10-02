@@ -40,6 +40,7 @@ mallar: mallar/
 	$(latexmk) $<motionsmall/motionsmall.tex
 	$(latexmk) $<intygsmall/intygsmall.tex
 	$(latexmk) $<deltagarlista/deltagarlista.tex
+	$(latexmk) $<hedersmedlemsmall/hedersmedlemsmall.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
