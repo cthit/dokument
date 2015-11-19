@@ -1,0 +1,67 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Utlåtande från Styrelsen}
+\date{\today}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Teknologsektionen Informationsteknik}}
+\end{center}
+\vspace{1cm}
+\subsection*{}
+I bokföringen som tillhör arbetsmarknadsgruppen ArmIT 14/15 finns det sex verifikat som hanterar extern representation: 
+\\
+\\
+\textit{
+\begin{itemize}
+\item Verifikat 10 behandlar en säljlunch med Netlight. Lunchen planerades in för att spika ett bowlingevenemang och det som diskuterades då var priser och upplägg. 
+\item Verifikat 17 behandlar biljettpriser för en startup-konferens där armIT höll en presentation och knöt kontakter med intressanta företag. 
+\item Verifikat 41 behandlar en lunch med Academic Work där samarbetsavtalet för 2015 fastslogs. 
+\item Verifikat 53, 54 & 59 behandlar den årliga konferensen mellan D-sektionen i Lund. Detta godkändes av föregående års styrelse och därmed tycker även vi att detta är skäligt. Ett utbyte som detta är bra för sektionen då arbetsmarknadsgruppen lär sig väldigt mycket.
+\end{itemize}
+}
+\\
+Vi i StyrIT finner att dessa sex utlägg gynnar sektionen och där med godkänner dem.
+
+\vspace{4cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Gabriel Andersson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Jonathan Thunberg}{Kassör}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}
+\end{document}
