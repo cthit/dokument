@@ -174,7 +174,7 @@
         \fi
         
         \ifdef{\@approved}{{Antagen: \@approved \\}}{}
-        \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
+        \ifdef{\@revisioned}{{\@revisioned}}{}
         \ifdef{\@editorial}{{Redaktionell revidering: \@editorial}}{}
         
         
@@ -220,7 +220,7 @@
     \ifpagination
       Sida \thepage\ av \pageref{LastPage}\\
     \fi
-    \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
+    \ifdef{\@revisioned}{{\@revisioned}}{}
   }
   
   % Calculate header height
