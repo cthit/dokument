@@ -42,6 +42,7 @@ mallar: mallar/
 	$(latexmk) $<deltagarlista/deltagarlista.tex
 	$(latexmk) $<hedersmedlemsmall/hedersmedlemsmall.tex
 	$(latexmk) $<beslutsmall/beslutsmall.tex
+	$(latexmk) $<namnlista/namnlista.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
