@@ -209,7 +209,7 @@
   
   \newcommand{\headleft}{%
     \raisebox{-3mm}{\includegraphics[width=16mm]{itlogo}}\hspace{1mm}
-    \parbox[b]{10cm}{%
+    \parbox[b]{12cm}{%
       \textbf{Teknologsektionen Informationsteknik}\\
       Chalmers studentkår\\
       \@title

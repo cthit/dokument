@@ -1,0 +1,63 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{stringstrings}
+
+\makeatletter
+\newcommand\nextyear{%
+  \ifx\c@year\undefined
+    \newcounter{year}%
+    \setcounter{year}{\the\year}%
+    \stepcounter{year}%
+  \fi
+  \substring{\arabic{year}}{3}{4}%
+}
+\makeatother
+
+\graphicspath{ {images/} }
+
+\begin{document}
+\thispagestyle{empty}
+
+\title{Valberedningens nomineringar inför sektionsmötet i LP2 \the\year}
+\subtitle{ \large Teknologsektionen Informationsteknik \\ Chalmers Tekniska Högskola}
+% Use \maketitle if the standard first page layout is prefered
+
+\begin{center}
+\includegraphics{itlogo}
+\end{center}
+
+\makeheadfoot%
+
+\makesimpletitle
+\vspace{1cm}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+% This is the perfect placement for a picture of a whale
+% \includegraphics[scale=0.5]{whale}
+
+Vid frågor, kontakta \textbf{val}beredningen@chalmers.it
+\end{center}
+
+\newpage
+% Use \NOLLKIT or similar
+\subsection*{FKIT{'\nextyear}}
+
+Gruppindelningen är nu klar,
+bara lite LaTeX kvar.
+Se tillbaka på allt ni gjort,
+uppdraget har varit stort.
+Ni har utfört jobbet för att behaga,
+ändå kommer folk att klaga.
+Kom till oss om problem sker,
+vi pateter finns för er.
+
+\subsubsection*{Post – Förnamn ‘Nick’ Efternamn}
+Motivering
+
+\subsubsection*{Post – Förnamn ‘Nick’ Efternamn}
+Motivering
+
+\end{document}
