@@ -174,7 +174,7 @@
         \fi
         
         \ifdef{\@approved}{{Antagen: \@approved \\}}{}
-        \ifdef{\@revisioned}{{\@revisioned}}{}
+        \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
         \ifdef{\@editorial}{{Redaktionell revidering: \@editorial}}{}
         
         
