@@ -1,0 +1,61 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Hedersmedlemskapsdiplom}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Wolfgang Ahrendt}}
+\end{center}
+\vspace{1cm}
+\subsection*{}
+Intyg att Wolfgang Ahrendt har utnämnts till hedersmedlem hos Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola datumet 2016-02-25 med motiveringen: 
+\\
+\textit{
+``Wolfgang Ahrendt väljs till hedersmedlem av sektionen för sina extraordinära in-
+satser under sina år som programansvarig - en position där han har gjort mycket mer än vad som förväntas av posten. Wolfgang har värnat om studentkulturen och sektionens verksamhet, samt varit en verklig del av sektionen under våra arrangemang, med fina tal och välframförda gückel. Allt detta samtidigt som han alltid lyssnat på studenter och ständigt arbetat med att förbättra programmet och utbildningen så att vi studenter kan vara säkra på att den håller hög kvalitet. Wolfgang är en starkt bidragande orsak till var sektionen befinner sig idag och vilken relation sektionen har med sin programledning.''
+}
+\\
+En hedersmedlem är en person som synnerligen främjat teknologsektionens intressen och strävanden. Hos Teknologsektionen Informationsteknik har endast två tidigare personer utnämnts till hedersmedlem under sektionens hela 15 år.
+
+\vspace{4cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Gabriel Andersson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+\end{document}

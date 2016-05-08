@@ -1,4 +1,4 @@
-.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar flashit ordlista
+.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar flashit ordlista hedersmedlemmar
 
 # Note: the $< variable is the 1st "argument" to the target while
 # $@ is the target.
@@ -11,7 +11,7 @@ latexmk=latexmk -outdir=$(builddir)/$@ -f -quiet -silent -pdf -xelatex -use-make
 # The dir that the finished pdfs should be copied into. Relative to this filek
 copydir=../
 
-all: verksamhetsplaner reglemente policies stadga mallar flashit ordlista
+all: verksamhetsplaner reglemente policies stadga mallar flashit ordlista hedersmedlemmar
 
 verksamhetsplaner: verksamhetsplaner/
 	$(latexmk) $<styrit14.tex
@@ -44,6 +44,10 @@ mallar: mallar/
 	$(latexmk) $<beslutsmall/beslutsmall.tex
 	$(latexmk) $<namnlista/namnlista.tex
 	$(latexmk) $<nomineringsmall/nomineringsmall.tex
+
+hedersmedlemmar: hedersmedlemmar/
+	$(latexmk) $<anette.tex
+	$(latexmk) $<wolfgang.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
