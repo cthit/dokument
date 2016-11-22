@@ -77,7 +77,7 @@
 
 \DeclareDocumentCommand \NOLLKIT {}{\mbox{NollKIT}}
 \DeclareDocumentCommand \NOLLKITFULL {}{%
-  Mottagningskomittén Informationsteknik, \NOLLKIT{}%
+  Mottagningskommittén Informationsteknik, \NOLLKIT{}%
 }
 
 \DeclareDocumentCommand \DIGIT {}{\mbox{digIT}}
