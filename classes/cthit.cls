@@ -53,6 +53,10 @@
   \end{list}
 }
 
+\DeclareDocumentCommand \paragraphref {m}{%
+    §\ref{#1}%
+}
+
  %mbox to prevent line-breaking on name
 \DeclareDocumentCommand \HUBBEN {}{\mbox{Hubben}}
 
