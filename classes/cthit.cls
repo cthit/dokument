@@ -125,6 +125,11 @@
   Film- och fotoföreningen Informationsteknik, \FLASHIT{}%
 }
 
+\DeclareDocumentCommand \MRCIT {}{\mbox{MRCIT}}
+\DeclareDocumentCommand \MRCITFULL {}{%
+  Master Reception Committee Information Technology, \MRCIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
