@@ -34,6 +34,7 @@ stadga: stadga/stadga.tex
 
 flashit: flashit/flashit_stadga.tex
 	$(latexmk) $<
+
 8-bit: 8-bit/8-bit_stadga.tex
 	$(latexmk) $<
 
