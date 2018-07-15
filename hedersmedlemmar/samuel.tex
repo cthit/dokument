@@ -1,0 +1,60 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+\hyphenpenalty=100000
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Hedersmedlemskapsdiplom}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Samuel Bengmark}}
+\end{center}
+
+\subsection*{}
+Intyg att Samuel Bengmark har utnämnts till hedersmedlem hos Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola datumet 2017-10-05 med motiveringen: 
+\newline
+\newline
+\textit{
+``Samuel Bengmark väljs till hedersmedlem av sektionen för sina extraordinära insatser under sina år som både programansvarig och även som sektionens inspektor. Samuel grundade IT-programmet och har mer än någon annan individ influerat programmets kultur och värdegrund. Samuel lade grunden till den goda relation som sektionen har med sin programledning. Samuel var även med och skrev flera av de gückel som fortfarande framförs av hans efterträdare. Samuel gjorde likt hans två efterträdare mycket mer än vad som förväntades av honom som programansvarig och har alltid värnat för studentkulturen som vi har på vår sektion. Efter sin tid som programansvarig satt Samuel under många år som sektionens inspektor och fortsatte på så sätt att hjälpa sektionen växa och utvecklas till den sektion som vi har idag. Kort sagt skulle IT-sektionen inte existerat utan Samuel. Som hedermedlem tror vi att Samuel kommer att fortsätta att ge tillbaka till sektionen.''}
+\newline
+\newline
+En hedersmedlem är en person som synnerligen främjat teknologsektionens intressen och strävanden. Hos Teknologsektionen Informationsteknik har endast tre tidigare personer utnämnts till hedersmedlem under sektionens hela 16 år.
+
+\vspace{2.5cm}
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Oscar Evertsson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+\end{document}
