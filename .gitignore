@@ -90,3 +90,12 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+## Other
+
+# OS specific
+.DS_Store
+
+# Editor specific
+# VS-Code
+.vscode
