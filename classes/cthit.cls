@@ -130,6 +130,11 @@
   Master Reception Committee Information Technology, \MRCIT{}%
 }
 
+\DeclareDocumentCommand \EQUALIT {}{\mbox{EqualIT}}
+\DeclareDocumentCommand \EQUALITFULL {}{%
+  Jämlikhetskommittéen Informationsteknik, \EQUALIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
