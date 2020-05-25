@@ -16,3 +16,6 @@ För att göra ändringar finns två alternativ:
 2. Kör det lokalt genom att skriva "make", se till att du har latex installerat lokalt.
 
 Det som ligger på master kompileras och laddas automagiskt upp så du behöver inte göra något för att ändra innehållet på https://styrit.chalmers.it/docs/
+
+**OBS!**: \\
+Dessa dokument behöver också kompileras med XeTeX kompilatorn. (I overleaf kan man välja detta genom att klicka på Menu -> Compiler och sedan välja XeTeX i listan.)
