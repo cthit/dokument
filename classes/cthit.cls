@@ -122,7 +122,7 @@
 
 \DeclareDocumentCommand \FLASHIT {}{\mbox{FlashIT}}
 \DeclareDocumentCommand \FLASHITFULL {}{%
-  Film- och fotoföreningen Informationsteknik, \FLASHIT{}%
+  Film- och fotokommittén Informationsteknik, \FLASHIT{}%
 }
 
 \DeclareDocumentCommand \MRCIT {}{\mbox{MRCIT}}
