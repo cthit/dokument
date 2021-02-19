@@ -1,0 +1,218 @@
+\documentclass[11pt, noincludeaddress]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{changepage}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\let\tempone\itemize
+\let\temptwo\enditemize
+\renewenvironment{itemize}{\tempone\addtolength{\itemsep}{-0.3\baselineskip}}{\temptwo}
+
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Handbok för sektionsmöte på IT-sektionen}
+\authors{styrIT}
+
+\revisioned{2021--02--41}
+\makeheadfoot%
+\makesimpletitle
+
+\tableofcontents
+\newpage
+
+%Sidnumreringsstart
+\setcounter{page}{1}
+
+
+
+\section{Dokument inom sektionen}
+\begin{itemize}
+    \item \textit{Stadga}
+    \begin{itemize}
+        \item Ena delen av de “regler” som gäller för sektionen och dess medlemmar. Denna reglerar bland annat alla medlemmars grundläggande rättigheter samt hur ett sektionsmöte ska gå till.
+        \item Förändringar i stadgan måste röstas igenom på två på varandra följande sektionsmöten.
+    \end{itemize}
+    \item \textit{Reglemente} -- Detta beskriver bland annat vilka kommittéer som finns och vad de har för åtaganden.
+    \item \textit{Policies} -- Sektionen har en del policies, såsom Lokalpolicy, Ekonomisk policy samt Kommunikationspolicy. De beskriver regler inom olika områden som behöver efterföljas av medlemmar på sektionen.
+\end{itemize}
+
+
+\section{Mötesfunktionärer}
+\begin{itemize}
+    \item Mötesordförande
+    \begin{itemize}
+        \item Talman förväntas nominera sig själv till denna post.
+        \item En mötesordförande leder sektionsmötet och fördelar ordet under diskussioner och liknande. 
+    \end{itemize}
+    \item Mötessekreterare
+    \begin{itemize}
+        \item I allmänhet nominerar sig styrITs sekreterare.
+        \item För protokoll under mötet, samt sammanställer anteckningar till Chalmers.it.
+    \end{itemize}
+    \item Justerare
+    \begin{itemize}
+        \item Ska finnas 2 justerare vilka väljs in av sektionsmötet.
+        \item Beräknar röstlängden, antalet personer som kan rösta, för mötet.
+        \item Ansvariga för att sätta upp VoteIT, ITs digitala anonyma röstningstjänst, inför personval.
+        \item Kontrollerar, efter mötet, att protokollet stämmer överens med vad som sades på mötet.
+    \end{itemize}
+\end{itemize}
+
+\section{Övriga parter}
+\begin{itemize}
+    \item \textit{Styrelsen styrIT} -- Driver sektionens dagliga arbete och har bland annat ansvar för föreningar/kommittéer och sektionsmöten.
+    \item \textit{Studienämnden snIT} -- Driver kursbevakning och verkar för en bättre utbildning.
+    \item \textit{Sektionskommittéer} -- Kommitter, av sektionsmötet ålagda att utföra ett visst uppdrag.
+    \begin{itemize}
+        \item \textit{ArmIT} -- Arrangerar bl.a. lunchföreläsningar och en årlig arbetsmarknadsmässa.
+        \item \textit{digIT} -- Ansvarar för sektionens digitala system.
+        \item \textit{EqualIT} -- Förser sektionen med utbildning och arrangemang med jämlikhetsfokus.
+        \item \textit{FanbärerIT} -- Arrangerar finkulturella event och ansvarar för att ITs fana är representerad vid finare tillställningar.
+        \item \textit{FlashIT} -- Fotar och filmar i sektionsrelaterade sammanhang.
+        \item \textit{frITid} -- Arrangerar idrottsaktiviteter och andra sportsliga event.
+        \item \textit{MRCIT} -- Arrangerar mottagning för nya masterstudenter på Lindholmen.
+        \item \textit{NollKIT} -- Arrangerar mottagningen för nya studenter på kandidatnivå.
+        \item \textit{P.R.I.T.} -- Underhåller Hubben och arrangerar bland annat pubrundor.
+        \item \textit{\textsc{sex}IT} -- Arrangerar gasquer och andra kul event.
+    \end{itemize}
+    \item \textit{Intresseföreningar} - Föreningar öppna för alla teknologer med ett gemensamt intresse
+    \begin{itemize}
+        \item \textit{DrawIT} -- Sektionens brädspelsförening, arrangerar brädspelskvällar.
+        \item \textit{LaggIT} -- Sektionens E-sportförening, arrangerar turneringar och LAN.
+        \item \textit{8-bIT} -- Sektionens retro/konsol spelförening, arrangerar spelkvällar.
+        \item \textit{hookIT} -- Sektionens odygd och häfvförening, arrangerar häfv och diffusa årsmöten.
+        \item \textit{fikIT} -- Sektionens fikförening, bakar till eller med sektionen.
+    \end{itemize}
+    \item \textit{Valberedningen} -- Bereder val till samtliga kommittéer samt styrIT och snIT.
+    \item \textit{Revisorer} -- Granskar sektionens verksamhet och ekonomi.
+    \item \textit{Sektionsfunktionärer}
+    \begin{itemize}
+        \item \textit{Talman} -- Oftast sektionsmötenas ordförande.
+        \item \textit{Kandidatmiddagsgruppen} -- Planerar och arrangerar kandidatmiddagen.
+        \item \textit{Alumnimiddagsgruppen} -- Arrangerar alumnimiddag var tredje år.
+    \end{itemize}
+    \item \textit{Gemene teknolog} -- \textbf{Detta är du!} Samtliga sektionens medlemmar har närvaro-, yttrande-, förslag- och rösträtt. Delta på mötet om du vill att din röst ska bli hörd eller vill bättre förstå hur sektionen fungerar!
+    \item Ev. ytterligare inadjungerade personer
+    \begin{itemize}
+        \item Detta kan göras med personer som inte är medlemmar av sektionen (och därför egentligen inte har närvarorätt på mötet).
+        \item Detta görs vanligen för en representant från FUM.
+        \item Man ges vanligen närvaro- och yttranderätt (alltså ej rösträtt)
+    \end{itemize}
+\end{itemize}
+
+\section{Under mötet}
+Mötet leds av mötesordföranden enligt given dagordning. När man på sektionsmötet diskuterar en punkt finns det en del begrepp som är bra att känna till:
+
+\subsection{Diskussionen}
+\begin{itemize}
+    \item \textit{Sakupplysning}
+    \begin{itemize}
+        \item När man vill ha mer information om en fråga, t.ex. budget/pris/bakgrund osv.
+        \item Går före diskussion.
+    \end{itemize}
+    \item \textit{Ordningsfråga}
+    \begin{itemize}
+        \item Fråga gällande mötet och hur det ska gå tillväga.
+        \item Kan väckas när som helst och går före sakupplysning.
+    \end{itemize}
+    \item \textit{Replik}
+    \begin{itemize}
+        \item Kortfattat svar som får ges när man som person eller förening/kommitté blivitnämnd vid namn.
+        \item Som svar på denna får kontrareplik ges, dock ej kontra kontrareplik.
+    \end{itemize}
+    \item \textit{Streck i debatten}
+    \begin{itemize}
+        \item Ifall mötet beslutar att införa streck i debatten får de som vill skriva upp sig på talarlistan, sedan fortsätter debatten tills denna är tom, utan att den kan fyllas på.
+        \item Replik är fortfarande tillåten.
+        \item Kan hävas genom omröstning.
+        \item Vem som helst kan begära streck i debatten.
+    \end{itemize}
+    \item \textit{Reservation}
+    \begin{itemize}
+        \item En reservation är ett mötestekniskt ställningstagande som innebär att den som reserverar sig inte ställer sig bakom det beslut som fattades.
+        \item En reservation kan lyftas i samband med beslutet, men kan också lämnas in skriftligt.
+        \item En reservation skrivs in i mötesprotokollet.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Skickas in till sektionsmötet}
+\begin{itemize}
+    \item \textit{Motion}
+    \begin{itemize}
+        \item Förslag som lämnas till sektionsmöte från en enskild eller en grupp teknologer.
+        \item styrIT är skyldiga att lämna ett skriftligt utlåtande om varje motion.
+        \item skall ha lämnats in minst 7 dagar innan sektionsmötet.
+    \end{itemize}
+    \item \textit{Proposition} -- Förslag som lämnas till sektionsmötet från styrIT
+    \item \textit{Interpellation} -- En fråga till styrIT från enskild teknolog som måste besvaras.
+    \item \textit{Verksamhetsrapport} -- En rapport inskickad av en kommitté som beskriver vad de gjort den senaste läsperioden.
+    \item \textit{Verksamhetsplan} -- En rapport inskickad av en kommitté som beskriver deras mål för året.
+    \item \textit{Budget} -- En ekonomisk plan för hur kommitté ska lägga sina pengar under året.
+    \item \textit{Verksamhetsberättelse} -- En rapport inskickad av en kommitté som beskriver vad de åstadkom under året.
+    \item \textit{Ekonomisk berättelse} -- En rapport vilken redovisar en kommittes ekonomisk resultat från det senaste året.
+    \item \textit{Revisionsberättelse} -- En rapport inskickad av revisorerna vilken redogör för vilket tillstånd kommitteers bokföring är i.
+    
+\end{itemize}
+
+\subsection{Komma till beslut}
+När man kommit till beslut finns det ett antal sätt detta kan göras på och oavsett röstningsförfarande går det alltid att rösta blankt. Vid acklamation och öppen votering görs detta genom att helt enkelt inte svara, vid sluten votering genom att inte välja färre alternativ än vad du har röster.
+
+\begin{itemize}
+    \item \textit{Votering}
+    \begin{itemize}
+        \item Röstning med handuppräckning.
+        \item I första hand sker rösträkning av mötesordföranden, kan denne inte avgöra görs det av justerare.
+    \end{itemize}
+
+    \item \textit{Acklamation}
+    \begin{itemize}
+        \item Detta används alltid, om inte annat begärts. 
+        \item Röstning sker med “ja-rop”.
+        \item Mötesordförande frågar: “är det sektionens mening att X?” och alla som håller medropar “Ja!”. Därefter: “Någon däremot?”, alla som håller med ropar “Ja!”.
+        \item Mötesordförande avgör vilken sida som vann.
+        \item Votering kan väckas av mötesdeltagare om denne anser att ordföranden hörde fel.
+    \end{itemize}
+    
+    \item \textit{Sluten votering}
+    \begin{itemize}
+        \item Sluten votering kan alltid begäras när man går till beslut.
+        \item Sker oftast vid personval.
+        \item Innebär anonym röstning.
+        \item IT sektionens röstsystem, VoteIT används (https://github.com/cthit/voteit), vilken commit som används specificeras i reglementet.
+    \end{itemize}
+    \item \textit{Kontrapropositionsvotering}
+    \begin{itemize}
+        \item Används när många alternativ står mot varandra.
+        \item 2 alternativ i taget ställs mot varandra tills endast ett kvarstår.
+        \item Kan vara lite krångligt, beskrivs därför ofta av mötesordförande när det kommer upp.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Personval}
+Val till kommittéer, styrIT och snIT, går till lite annorlunda och är lättast att förklara med ett exempel.
+
+I reglementet står det som följer:\textit{“\textsc{sex}IT består av ordförande, kassör samt 3-6 övriga ledamöter”} Detta innebär att kommittén kan innehålla som minst 5 och som mest 8 personer.
+
+Ordförande och kassör är speciellt omnämnda i reglementet och röstas in separat från resten av kommittén, först ordförande följt av kassör. Därefter väljer man samtliga ledamöter på samma gång.
+
+\subsubsection{Hur ett inval går till}
+Det första som händer är att mötesordförande frågar om någon vill nominera sig till den aktuella positionen. Alla intresserade ska nu nominera sig själva - detta gäller även för de som blivit nominerade av valberedningen. De nominerade, till den grad en sådan finns, presenteras. Alla utom en lämnar lokalen och sedan får samtliga intressenter enskilt presentera sig för - och svara på frågor från - sektionen medan resterande väntar utanför. Efter att samtliga presenterat sig får alla lämna lokalen och sektionsmötet går till diskussion. Valberedningen får här tillfälle att ge ett utlåtande om de som de har nominerat. Härefter får mötesdeltagare tillfälle att diskutera kandidaterna och uttala sitt förtroende, eller brist på sådant, för kandidaterna. Sedan röstar sektionsmötet på vilka man anser skall få en plats i kommittén. Här används sluten votering genom VoteIT eller klumpinval. 
+
+\subsubsection{Klumpinval}
+Klumpinval kan användas då det är färre eller lika många intresserade som det finns platser och sektionsmötet anser att alla intresserade är rimliga. De intresserade väljs då in som grupp med en acklamation.
+
+\subsubsection{VoteIT}
+Om det är fler nominerade än vad det finns platser, t.ex. två som nominerar sig till ordförande eller 7 som nominerar sig till ledamot i \textsc{sex}IT, då används alltid sluten votering. 
+
+VoteIT fungerar så att alla på sektionsmötet kommer få en lapp med ett antal koder. Dessa koder är unika och var och en är kopplad till ett visst val, till det första valet används den första koden, till det fjärde valet används den fjärde koden osv. Justerarna kommer dela en länk till en hemsida där valet kommer göras.
+
+När ett val har påbörjats finns alla valbara personer på den givna länken. Utöver de intresserade finns även ett antal vakanta, att lägga en röst på vakant är innebär att man anser att en position borde lämnas tom. Om man vill rösta blank använder man helt enkelt inte alla sina röster.
+
+\end{document}
+
