@@ -48,6 +48,7 @@ mallar: mallar/
 hedersmedlemmar: hedersmedlemmar/
 	$(latexmk) $<anette.tex
 	$(latexmk) $<wolfgang.tex
+	$(latexmk) $<samuel.tex
 
 ordlista: ordlista.tex
 	$(latexmk) $<
