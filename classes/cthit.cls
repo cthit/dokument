@@ -135,6 +135,11 @@
   Jämlikhetskommittéen Informationsteknik, \EQUALIT{}%
 }
 
+\DeclareDocumentCommand \FIKIT {}{\mbox{FikIT}}
+\DeclareDocumentCommand \FIKITFULL {}{%
+  Fikaföreningen på IT‐sektionen, \FIKIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }

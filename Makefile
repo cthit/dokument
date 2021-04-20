@@ -34,6 +34,7 @@ stadga: stadga/stadga.tex
 
 intresseforeningar: intresseforeningar/
 	$(latexmk) $<8-bit/8-bit_stadga.tex
+	$(latexmk) $<FikIT/FikIT_stadga.tex
 
 mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex

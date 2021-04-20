@@ -132,6 +132,11 @@
   Master Reception Committee Information Technology, \MRCIT{}%
 }
 
+\DeclareDocumentCommand \FIKIT {}{\mbox{FikIT}}
+\DeclareDocumentCommand \FIKITFULL {}{%
+  Fika and baking society, \FIKIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
