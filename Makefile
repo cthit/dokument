@@ -7,16 +7,11 @@
 builddir=build
 # The base command that should be run. Note that you can override -outdir
 # in the individual targets.
-latexmk=latexmk -outdir=$(builddir)/$@ -f -quiet -silent -pdf -xelatex -use-make-
+latexmk=latexmk -outdir=$(builddir)/$@ -f -pdf -xelatex -use-make-
 # The dir that the finished pdfs should be copied into. Relative to this filek
 copydir=../
 
-all: verksamhetsplaner reglemente policies stadga mallar intresseforeningar ordlista hedersmedlemmar
-
-verksamhetsplaner: verksamhetsplaner/
-	$(latexmk) $<styrit14.tex
-	# Example of -outdir override
-	#$(latexmk) -outdir=$(builddir)/$@/styrit_override $<styrit.tex
+all: verksamhetsplaner reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar
 
 reglemente: reglemente/reglemente.tex
 	$(latexmk) $<
@@ -51,11 +46,14 @@ hedersmedlemmar: hedersmedlemmar/
 	$(latexmk) $<wolfgang.tex
 	$(latexmk) $<samuel.tex
 
-ordlista: ordlista.tex
-	$(latexmk) $<
+ordlista: stoddokument/
+	$(latexmk) $<digital_moteshallning.tex
+	$(latexmk) $<ordlista.tex
+	$(latexmk) $<sektionsmoteshandbok.tex
+
 
 copy:
-	rsync -a $(builddir)/ $(copydir) --include "*.pdf" --include "*/" --exclude "*"
+	cp -n ./build/**/*.pdf ./build/output
 
 clean:
 	find $(builddir) ! -name "*.pdf" -type f -delete
