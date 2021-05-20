@@ -1,0 +1,282 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\addtokomafont{labelinglabel}{\sffamily}
+\usepackage[top=2cm]{geometry}
+
+\title{Kassör 101 \\ \vspace{10pt} \Large{Tips och tricks för dig som är kassör på IT.}}
+\author{Katarina Bergbom\\ 
+\small{baserat på original av Cecilia Geijer 2013 och uppdateringar av Johan Lindskogen 2017,}\\
+\small{små uppdateringar av Erik Johnsson 2020}}
+\date{2019}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Intro till kassörsrollen}
+Först och främst, grattis till vara invald som kassör. Här nedan kommer lite tips och tricks som är bra att läsa igenom, samt återkomma till när frågor uppstår. Viktigaste att komma ihåg är dock att du aldrig är ensam, utan kan alltid fråga din sektionskassör.   
+
+\subsection*{Ansvar}
+Som kassör har du, tillsammans med din ordförande, ansvar för att din kommittés ekonomi sköts. På IT-sektionen finns ett ansvarskontrakt som beskriver era ansvar, samt den hjälp ni kan förvänta er från sektionen. Detta kontrakt behöver ni skriva under för att få access till bankkontot och bokföringskontot. \\
+
+Viktigt är att ni har koll på den ekonomiska policyn. 
+
+\subsection*{Saker du behöver få från föregående kassör}
+\begin{itemize}
+    \item Lista över alla skulder ("Vi är skyldiga StyrIT 3000 kr för reparation")
+    \item Lista över alla fodringar ("A är skyldig oss 80 kr för icke-betalad biljett")
+    \item Lista över inventarier (dyra saker kommittén äger, typ boombox)
+\end{itemize}
+
+\subsection*{Få tillgång till bokföringsprogrammet och ert bankkonto}
+På IT bokför vi med hjälp av FortNox, som du loggar in till via \href{https://fortnox.se}{FortNox}.För att kunna logga in behöver du skicka namn, personnummer, mail och telefonnummer till sektionskassören. Du behöver också få tillgång till ert bankkonto hos \href{https://www.swedbank.se/}{Swedbank}, vilket sektionskassören anmäler till dem. \\
+
+Du ska också bli inbjuden till kassörs-latex:en, där det finns olika mallar. 
+
+\section{Intro till Bokföring}
+Enligt lagen ska bokföring ske i samband med att händelsen sker. Med andra ord ska du
+bokföra en sak snarast efter att pengar satts in/dragits från t.ex. bankkontot. Detta är delvis för
+din egen skull, det är otroligt mycket svårare att bokföra något en månad efter att det skett.\\
+
+Vi bokför enligt fakturametoden, vilket innebär att alla händelser ska bokföras. Både transaktioner till och från bankkontot, men också när medlemmar lägger ut pengar för inköp samt fakturor skickas eller mottages. För närmare information om hur man bokför, se nedan. 
+
+\subsection*{Rapporter}
+Från din bokföring kan du skriva ut olika rapporter, både för ditt kostnadsställe och för allas. Det finns huvudsakligen de fyra olika rapporterna som följer: 
+
+\begin{description}
+    \item[Verifikatlista] - En lista med alla verifikat som gjorts. 
+    \item[Balansräkning] - Hur man ligger till i det stora hela, med fonder och liknande inkluderat.
+    \item[Resultaträkning] - Vad som har hänt för året, vilka förändringar som skett.
+    \item[Huvudbok] - Den mest omfattande rapporten som presenterar alla kontoplaner och dess händelser. Är som verifikatlistan fast grupperat till konto.
+\end{description}
+
+\subsection*{Kontoplaner}
+Varje händelse ska matchas mot ett bokföringskonto. Dessa konton är inddelade i ett sådant system att första bokstaven i varje konto är en speciell sorts konto. Börjar det på 1 är det ett fysiskt bankkonto, 2 så är det skuldkonto, 3 så är det ett intäktskonto, och 4 och uppåt är kostnadskonton. Flera konton baseras på en baskontoplan som ges ut av \href{http://www.bas.se/}{BAS} varje år.  
+
+\subsection*{Kvartalsrapport}
+Inför varje sektionsmöte (tre veckor innan, oftast torsdag LV3), skicka din bokföring till revisorerna (revisorer@chalmers.it) samt
+StyrITs kassör (kassor@chalmers.it). Anledningen till att det ligger så tidigt är att revisorerna skall ha tid för att gå igenom din ekonomi.
+För kassörer som ämnar att bli ansvarsbefriade gäller samma inlämningsdatum för bokslut.
+
+Det som ska skickas är:
+\begin{labeling}{Transaktionslista}
+    \item [Verifikatlista] \small{(Rapporter $\rightarrow$ Bokföring $\rightarrow$ Verifikationslista)}
+    \item [Huvudbok] \small{(Rapporter $\rightarrow$ Bokföring $\rightarrow$ Huvudbok)}
+    \item [Resultatrapport] \small{(Rapporter $\rightarrow$ Bokföring $\rightarrow$ Resultatrapport)}
+    \item [Balansrapport] \small{(Rapporter $\rightarrow$ Bokföring $\rightarrow$ Balansrapport)}
+    \item [Kontoplan] \small{(Rapporter $\rightarrow$ Register och listor $\rightarrow$ Kontoplan)}
+    \item [Transaktionslista] \small{(Från kontot $\rightarrow$ Beställa rapporter $\rightarrow$ Transaktionsrapport)}
+\end{labeling}
+
+De flesta nås via "Rapporter" i FortNox, den sista är en utskrift från bankens hemsida över allt som hänt på kontot. Detta görs för att
+revisorerna ska kunna se att du är på rätt väg, och en sporre för att du inte ska skjuta för mycket på din bokföring.
+
+Om du av nån anledning behöver en eller två dagar extra och blir sen med att skicka in din bokföring, maila då revisorerna och StyrITs kassör i tid och tala om det!
+
+\newpage
+\section{Verifikat}
+Din bokföring behöver bara finnas på FortNox. Om du eller en sektionsmedlem får in t.ex. kvitton eller fakturor fysiskt så måste dessa sparas digitalt och som original. Det fysiska underlaget sparas med hjälp av en \textit{redovisiningsmall} som finns på \url{styrit.chalmers.it/kassor}. Varje gång du bokför ska du skapa ett verifikat, där det står hur mycket pengar som lagts på vad. Ett verifikat innehåller följande: 
+
+\begin{labeling}{Namn på person som lagt ut}
+    \item[Verifikatnummer] Ett nummer som genereras av FortNox. Varje kommittée har en egen verifikationsserie som man bokför i, vilket ges av tabell \ref{committee-verifikat}
+    \item[Beskrivning] En beskrivande text av vad som är köpt, och till vad.
+    \item[Bokföringsdatum] Datum då händelsen inträffade. Ges antingen av bokföringsdatumkolumnen hos Swedbank, fakturadatumet eller kvittots datum. 
+    \item[Kostnadsställe] Varje kommittée har ett eget kostnadsställe, se tabell \ref{committee-verifikat}. Bokför alltid på ditt egna kostnadsställe. 
+    \item[Debit och Kredit] Se sektion \ref{sec:debit-kredit}.  
+    \item [Underlag] Till de flesta händelserna ska underlag bifogas. Underlag är kvitton, fakturor samt deltagarlistor. Om underlaget finns hos en motsvarande verifikat, exempelvis vid medlemsutlägg där kvittot finns när utlägget uppstod, behöver det ej bifogas då utlägget betalas ut. 
+\end{labeling}
+
+När det sedan är dags för bokslut eller ansvarsbefrielse så kommer du och ordförande behöva signera en kopia av verifikationslistan som går att få ut från FortNox.
+
+% DIGITALISERA BORTAGIT::
+
+%På StyrITs hemsida finns en \href{https://styrit.chalmers.it/wp-content/uploads/Verifikatmall.pdf}{verifikatmall} för de fysiska verifikaten, vilket kan bli autoifyllt med hjälp av IT's script. Dock behvöer du fortfarande fylla i följande fält:
+
+
+%\begin{labeling}{Namn på person som lagt ut}
+%    \item [Verifikatnummer] Ett nummer som du får av FortNox. Sekventiell numrering av
+%verifikaten.
+%    \item [Underlag] Häftas fast på baksidan av verifikatetpappret. Om orginalunderlaget är fysiskt ska detta användas; är det digitalt ska det digitala skrivas ut. 
+%    \item [Förklarande text] En beskrivande text av vad som är köpt, och till vad. Eventuellt om verifikatet hör ihop med ett annat kan detta nämnas. Exempel betalning av en medlemsskuld. 
+%    \item [Underskrift] Du ska signera att händelsen stämmer.
+%    \item [Attest] Signatur av antingen den som har lagt ut, eller av din ordförande om det inte är ett utlägg. Detta för att någon mer ska bekräfta att bokföringen är sann. 
+%\end{labeling}
+
+
+
+\begin{table}[h]
+\centering
+\caption{Verifikatserier och kostnadsställen för kommittéer}
+\label{committee-verifikat}
+\begin{tabular}{lll}
+A & 10 & styrIT     \\
+B & 20 & sexIT      \\
+C & 30 & ArmIT      \\
+D & 40 & P.R.I.T.   \\
+E & 50 & NollKIT    \\
+F & 60 & frITid     \\
+G & 70 & digIT      \\
+H & 80 & MRCIT \\
+I & 90 & snIT       \\
+J & 100 & FanbärerIT \\
+\end{tabular}
+\end{table}
+
+
+\section{Kvitto}
+Kvittot är till för att man i efterhand ska kunna se att det som skrivs på verifikatet verkligen stämmer. Fråga alltid efter kvitto, alla affärer ska ge ut dem, och om kvitto saknas får inte föreningens pengar användas. Man har även rätt att gå till affären och hämta ut ett kvitto
+vid ett senare tillfälle om detta har tappats bort.
+På IT accepterar vi kvitton som är upp till två veckor gamla, detta för att de fortfarande ska vara läsliga och du ska kunna bokföra i tidsordning. Glöm inte att säga det till personer som lägger ut pengar. Se till att inköparen skriver namn och syfte på baksidan så sparar du dig själv
+mycket framtida besvär.Om ett kvitto av någon anledning saknas går det att skriva ett eget kvitto. Detta är
+endast något som ska göras i undantagsfall, i normala fall SKA riktigt kvitto finnas. När du
+skriver ett kvitto ska följande finnas med:
+
+\begin{itemize}
+    \item Datum och klockslag
+    \item Artikelnamn och antal
+    \item Pris och hur stor andel som är moms
+    \item Underskrift av kassör och inköpare för att intyga att uppgifterna stämmer
+\end{itemize}
+
+\section{Skuld och fordran}
+Det är väldigt användbart att använda skulder och fodringar för att t.ex. hålla koll på pengar
+som inte är i dina händer. Fordran betyder att någon är skyldig dig pengar medans skuld
+betyder att du är skyldig någon pengar.
+
+\section{Debet och kredit}
+\label{sec:debit-kredit}
+Vid dubbel bokföring, vilket används på IT, har varje konto (t.ex. bankkontot eller kontot för
+arrangemangskostnader) två sidor: \textit{debet} och \textit{kredit}. På varje verifikat måste de två sidorna
+balanseras ut, dvs. debet måste innehålla lika mycket pengar som kredit. Ordningen på debet
+och kredit, dvs. vilken kolumn som är till höger och vilken som är till vänster spelar ingen
+roll.
+Betydelsen av debet och kredit varierar beroende på vilken typ av konto det är som
+används. Nedan finns en liten lathund:
+
+
+\begin{tabular}{ l | l | l }
+\hline
+Typ av konto & Debet & Kredit \\
+\hline
+Skuldkonto & Skulden minskar & Skulden ökar \\
+Tillgångskonto & Tillgång ökar & Tillgång minskar \\
+Intäktskonto & Intäkt minskar & Intäkt ökar \\
+Utgiftskonto & Utgifterna ökar & Utgifterna minskar
+\end{tabular}
+
+Exempel på standardhändelser och hur de ska bokföras finns i våra \href{https://styrit.chalmers.it/wp-content/uploads/bokforingsmall.pdf}{bokföringsmallar}. 
+
+\section{Fakturor och internfordringar}
+\label{sec:faktura}
+En del av arbetet är att betala och skicka fakturor samt internfordringar. \textbf{Fakturor} är något som skickas till externa parter, exempelvis företag men också intresseföreningar på IT. \textbf{Internfordringar} skickas mellan kommittéer på IT för att tydliggöra vem som är skyldig vem för vad.
+
+\newpage
+\subsection{Ta emot faktura}
+Ibland om man har köpt en vara eller tjänst så frågar företaget om uppgifter för att kunna skicka fakturan. Vilka uppgifter som behövs kan variera lite från företag till företag, men följande uppgifter är förhoppningsvis tillräckligt för allt:
+\begin{addmargin}[1cm]{0cm}
+\textit{
+\textbf{Föreningsnamn}: TEKNOLOGSEKTIONEN INFORMATIONSTEKNIK \\
+\textbf{Kontaktperson/referens/att}: \lbrack Kommitté\rbrack, \lbrack Kontaktperson\rbrack \\
+\textbf{Telefonnummer}: \lbrack Telefonnummer till kontaktperson \rbrack \\
+\textbf{Org.nummer}: 857209-9524 \\
+\textbf{Adress}:
+TEKNOLOGGÅRDEN 2 \\
+c/o: CHALMERS STUDENTKÅR \\
+412 58 GÖTEBORG}
+\end{addmargin}
+
+\subsection{Skicka faktura}
+Mall för faktura finns på kassörs-sharelatexen. Fakturanumret ska vara löpande och obruten för varje kommittée varje räkenskapsår, dvs första juli till sista juni. För att det inte ska bli konstigt i Fortnox, följer vi konventionerna: ÅÅÅÅX001, för första externa fakturan och sedan ÅÅÅÅX002, osv. Där år ÅÅ/ÅÅ räkenskapsåret, och X är kommitténummret som ges av Tabell \ref{committee-numbers}. Exempel så blir P.R.I.T.s första fakturanummer under räkenskapsår 17/18 följande: 17182001. Fakturadatum är dagens datum och förfallodatum sätts som 30 dagar senare. Det är fakturadatumet som är bokföringsdag för skickandet av faktura.  
+\begin{table}[h]
+\centering
+\caption{Kommitteesiffror vid fakturering}
+\label{committee-numbers}
+\begin{tabular}{ll}
+0 & styrIT     \\
+1 & sexIT      \\
+2 & P.R.I.T.   \\
+3 & NollKIT    \\
+4 & ArmIT      \\
+5 & digIT      \\
+6 & frITid     \\
+7 & snIT       \\
+8 & FanbärerIT \\
+9 & MRCIT \\
+\end{tabular}
+\end{table}
+Fakturan fylls i enligt följande, där specifikation, á pris, och antal fylls i en så kallad \textit{produkt} i latex. Se mallen så finns exempel: 
+\begin{description}
+    \item[Fakturadatum] - Datum du skickar fakturan
+    \item[Fakturaadress] - Adressen dit du skickar fakturan, dvs. kundens adress.
+    \item[Er referens] - Deras referensperson
+    \item[Vår referens] - Ditt namn
+    \item[Förfallodatum] - 30 dagar efter fakturadatum
+    \item[Specifikation] - Vad är det du fakturerar för? Exempelvis lunchföreläsning
+    \item[á-pris] - Vad kostar en st av det du säljer?
+    \item[Antal] - Hur många?
+    \item[Summa] - Fylls i automatiskt av á-pris*antal
+\end{description}
+
+\subsection{Kreditfakturor}
+Kreditfakturor skickar man om man behöver rätta till eller ta tillbaka en tidigare felaktig faktura. Använd kreditfakturamallen som finns på latex. Den ska se exakt likadan ut som den fakturan ni vill rätta till, med undantag av föjande: 
+\begin{itemize}
+    \item Rubrik kreditfaktura istället för faktura
+    \item Nya fakturadatum, förfallodatum och fakturanummer
+    \item Minus i antalet varor ni hade på första fakturan. Exempelvis om ni tidigare har fakturerat en lunchföreläsning för 6000kr som ni har fått inbetalt, ska det nu stå -1 i antal och därmed blir totalsumman -6000kr. 
+    \item Det ska tå vilken faktura som kreditfakturan krediterar. 
+\end{itemize}
+Sedan skickas en ny, korrekt faktura. Se bokföringsmallar för hur kreditfakturor bokförs. 
+
+\subsection{Skicka internfordran}
+Mall för interfordran finns också på kassörs-sharelatexen. Fordringsnummret ska \textbf{inte} vara samma som ett fakturanumret, då internfordringar bara är för vår organisations privata bruk och underlag. Istället skriver vi på IT fordringsnummer på formen ÅÅMMDDXN, där ÅÅMMDD är fordringsdatumet, X är kommittéesiffran på den skickande komimttéen och N är vilket nummer fordran för kommittéen har den dagen. Exempel så kanske NollKIT skickar sin andra fordran för dagen den 16 november 2017  till StyrIT, och då får fordran nummer 171211632. \textbf{Ange alltid fordringsnummer i betalningen}. \\
+
+Vid skickande av Swish och iZettle-fordringar, så ska en fordran skickas per dag. Varje produkt ska ha en rad i fordran, men man kan klumpa ihop flera försäljningar av samma produkt på en rad. Avgiften som iZettle eller Swish tar ska också var med på en egen rad, med minus framför. Det ska också skrivas om det är Swish eller iZettle det gäller. Exempel på en perfekt internfordran ses bland bilagorna. 
+
+\section{Deltagarlista}
+Deltagarlista ska bifogas till alla händelser där man bjuder sektionsmedlemmar på mat, exempelvis kassörskvällar, teambuildings samt aspningsarrangemang där mat bjuds. Detta är för att vi ska kunna se att vår ekonomiska policy hålls, samt att vi ska kunna bevisa att vi inte ger ut något som kan ses som löneersättning från Skatteverkets håll. Deltagarlistan finns \href{https://styrit.chalmers.it/wp-content/uploads/deltagarlista.pdf}{här}. Den ska fyllas i med för- och efternamn, kryssa i medlemskap om personen är medlem på sektionen samt övrig kommentar om sådan finns. 
+
+\section{Representation}
+Vid representation ska en deltagarlista finnas i bokföringen. Exempel på representation är:
+\begin{itemize}
+    \item Aspning
+    \item Intern teambuilding (intern representation)
+\end{itemize}
+
+\section{Sunfleet}
+\label{sec:sunfleet}
+På IT så använder vi oss av Sunfleet om man behöver hyra bilar för kommittéeverksamhet, exempelvis inköp hos Axfood. Cirka två från varje kommittée kan få ett sunfleetkort, och för att göra det så behöver de registrera sig hos sunfleet. Detta frågar de sektionskassören om, så får de access. 
+\subsection{Riktlinjer vid användande}
+För att använda Sunfleet, ska de veta om och följa följande riktlinjer:
+\begin{itemize}
+    \item Boka hellre en timma för långt än precis. Det är mycket billigare att boka ytterligare en timma, än en eventuell förseningsavgift. Bilköer kan uppstå, och det tar nästan alltid längre tid att handla än vad man tror. 
+    \item I bokningen, skriv kommittéer som ska betala för resan. Ofta är det samkörningar till Axfood, och för att du ska kunna fordra rätt direkt så behöver det stå. Även om man bara är en kommittée ska detta stå, då vissa personer är med i flera kommittéer och du inte ska behöva kunna allas riktiga namn. 
+    \item Den som har bokat \textbf{måste} vara med i bilen vid körtillfället. Behöver inte vara den som kör, men den som kör behöver också ha konto hos sunfleet. 
+\end{itemize}
+Du som kassör får sedan en internfordran i slutet av varje månad för varje resa din kommittée har gjort den månaden.
+
+\section{iZettle och Swish}
+\label{sec:izettle-swish}
+Vi använder oss av iZettle och Swish för att ha en kontantfri sektion. 
+\subsection{iZettle}
+På sektionen har vi flera iZettle-dosor, som primärt används vid biljettförsäljning. De tar 1,5 \% i avgift som kommittéen själv står för och bokför. Vill du använd iZettle behöver du ett konto och får säga till sektionskassören. Du behöver sedan ange vilka produkter du vill sälja till sektionskassören, som är den enda som kan lägga upp dessa produkter. \textbf{Detta ska sägas minst 3 dagar i förväg}. Efter försäljning skickas en internfordran till kassören, på intäkterna minus avgifterna. 
+
+Bokföringsexempel för iZettle finns i dokumentet \href{https://styrit.chalmers.it/wp-content/uploads/bokforingsmall.pdf}{Bokföringsmallar}. 
+
+\subsection{Swish}
+Swish fungerar liknande iZettle, förutom att kostnaden är 1,5 kr per swish. Mycket dyrare och används främst vid pubrundornas våffelförsäljning. Vårt Swishnummer är 123 617 41 71.
+
+\section{Övrigt}
+\begin{itemize}
+    \item ITs ekonomiska policy finns på StyrITs hemsida. Här kan du utläsa exakt hur mycket du får lägga på till exempel inköp av profilering som overaller.
+    \item Googla, fråga, leta på egen hand. Det finns många sätt att bokföra på, och det finns en
+uppsjö av råd om du bara letar lite. Det brukar även finnas mer specifik information på
+kommittéers wikis.
+    \item Kom ihåg att bokföringen ska sparas i minst 7 år efter att du gått av.
+\end{itemize}
+
+
+\end{document}

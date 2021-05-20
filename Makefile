@@ -1,4 +1,4 @@
-.PHONY: all clean copy verksamhetsplaner reglemente policies stadga mallar intresseforeningar ordlista hedersmedlemmar
+.PHONY: all clean copy reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser
 
 # Note: the $< variable is the 1st "argument" to the target while
 # $@ is the target.
@@ -11,7 +11,7 @@ latexmk=latexmk -outdir=$(builddir)/$@ -f -pdf -xelatex -use-make-
 # The dir that the finished pdfs should be copied into. Relative to this filek
 copydir=../
 
-all: verksamhetsplaner reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar
+all: reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser
 
 reglemente: reglemente/reglemente.tex
 	$(latexmk) $<
@@ -27,10 +27,6 @@ policies: policies/
 stadga: stadga/stadga.tex
 	$(latexmk) $<
 
-intresseforeningar: intresseforeningar/
-	$(latexmk) $<8-bit/8-bit_stadga.tex
-	$(latexmk) $<FikIT/FikIT_stadga.tex
-
 mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
@@ -41,16 +37,24 @@ mallar: mallar/
 	$(latexmk) $<namnlista/namnlista.tex
 	$(latexmk) $<nomineringsmall/nomineringsmall.tex
 
+intresseforeningar: intresseforeningar/
+	$(latexmk) $<8-bit/8-bit_stadga.tex
+	$(latexmk) $<FikIT/FikIT_stadga.tex
+
+stoddokument: stoddokument/
+	$(latexmk) $<digital_moteshallning.tex
+	$(latexmk) $<ordlista.tex
+	$(latexmk) $<sektionsmoteshandbok.tex
+
 hedersmedlemmar: hedersmedlemmar/
 	$(latexmk) $<anette.tex
 	$(latexmk) $<wolfgang.tex
 	$(latexmk) $<samuel.tex
 
-ordlista: stoddokument/
-	$(latexmk) $<digital_moteshallning.tex
-	$(latexmk) $<ordlista.tex
-	$(latexmk) $<sektionsmoteshandbok.tex
-
+kassorsresurser: kassorsresurser/
+	$(latexmk) $<bokforingsmallar.tex
+	$(latexmk) $<kassor_101.tex
+	$(latexmk) $<kassorskontinuitet_kommitteer.tex
 
 copy:
 	cp -n ./build/**/*.pdf ./build/output

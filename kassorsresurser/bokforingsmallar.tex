@@ -1,0 +1,269 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Bokföringsmallar}
+\author{Katarina Bergbom}
+\date{Juli 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\newcommand{\prit}{P.R.I.T. }
+\newcommand{\fritid}{frITid }
+\newcommand{\nollkit}{NollKIT }
+\newcommand{\sexit}{sexIT }
+\newcommand{\fanbarerit}{FanbärerIT }
+\newcommand{\snit}{snIT }
+\newcommand{\mrcit}{MRCIT }
+\newcommand{\digit}{digIT }
+\newcommand{\armit}{ArmIT }
+\newcommand{\styrit}{StyrIT }
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Fakturor}
+\subsection{När ni får en faktura}
+\begin{description}
+    \item [Fakturan tas emot]: Kostnaden uppstår (kostnadskontot debeteras, 2440 (leverantörsskulder) krediteras. Datum är fakturadatumet, och beskrivning skriv \textit{FM - Din text}
+    \item [Fakturan betalas]: 2440 (leverantörsskulder) debeteras, bankkonto kommittée krediteras. Som beskrivning skriv \textit{FB - Din text}
+\end{description}
+Att använda FM och FB med samma övrig text gör att det är lätt att se vilka händelser som hör ihop, och även vilka fakturor som inte är betalda än.
+\subsection{När ni skickar en faktura}
+\begin{description}
+    \item [Fakturan skickas]: Intäkten uppstår (intäktskontot krediteras), 1510 (Kundfordringar) debeteras. Datum är fakturadatumet, och beskrivning skriv \textit{FS - Din text}
+    \item [Fakturan betalas in]: 1510 (Kundfordringar) krediteras, bankkonto kommittée debeteras. Som beskrivning skriv \textit{FI - Din text}
+\end{description}
+Att använda FS och FI med samma övrig text gör att det är lätt att se vilka händelser som hör ihop, och även vilka fakturor som inte är inbetalda.
+
+\subsection{Skicka kreditfaktura}
+Kreditfakturor bokförs tvärtemot vad en vanlig faktura hade bokförts.
+\begin{description}
+    \item [Kreditfakturan skickas]: Intäkten minskar (intäktskontot debeteras), 1510 (Kundfordringar) krediteras. Datum är fakturadatumet, och beskrivning skriv \textit{FS - Din text}
+    \item [Fakturan betalas in]: 1510 (Kundfordringar) debeteras, bankkonto kommittée krediteras. Som beskrivning skriv \textit{FI - Din text}
+\end{description}
+Att använda FS och FI med samma övrig text gör att det är lätt att se vilka händelser som hör ihop, och även vilka fakturor som inte är inbetalda.
+
+\subsection{Ta emot kreditfaktura}
+Kreditfakturor bokförs tvärtemot vad en vanlig faktura hade bokförts.
+\begin{description}
+    \item [Fakturan tas emot]: Kostnaden minskas (kostnadskontot krediteras, 2440 (leverantörsskulder) debeteras. Datum är fakturadatumet, och beskrivning skriv \textit{FM - Din text}
+    \item [Fakturan betalas]: 2440 (leverantörsskulder) krediteras, bankkonto kommittée debeteras. Som beskrivning skriv \textit{FB - Din text}
+\end{description}
+Att använda FM och FB med samma övrig text gör att det är lätt att se vilka händelser som hör ihop, och även vilka fakturor som inte är betalda än.
+
+
+\section{Medlemsutlägg}
+\subsection{Vanligt medlemsutlägg}
+Medlemsutlägg är ALLA gånger en medlem lägger ut privata pengar som sektionen sedan ska betala. 
+\begin{description}
+    \item [Varan köps]: Kostnaden uppstår (kostnadskontot debeteras, 2918 ( skulder medlemmar) krediteras.
+    \item [Pengar betalas ut till medlem]: 2918 (skulder medlemmar) debeteras, bankkonto kommittée krediteras.
+\end{description}
+\subsection{Medlemsutlägg i samband med äskning}
+Medlemsutlägg i samband med äskning betandlas som ett vanligt utlägg, \textbf{hos StyrIT}. Dvs att du som kommittée ska inte betala utlägget, även om ni som kommittée har äskat. Skulle detta ändå råka hända, får ni min \textit{arga} blick och bokför enligt följande: 
+\begin{description}
+    \item [Varan köps, hos StyrIT]: 4310 (Kostnader Äskningar) debeteras, 2918 ( skulder medlemmar) krediteras.
+    \item [Pengar betalas ut till medlem, av kommittée, hos kommittée]: Bankkonto kommittée krediteras, 1617 (Fordran StyrIT) debeteras. \textit{Skicka internfordran till StyrIT, med datum för ut}
+    \item [Pengar betalas ut till medlem, av kommittée, hbetalnios StyrIT]: 2918 ( skulder medlemmar) debeteras, fordran kommittée krediteras
+    \item [StyrIT betalar kommittée, hos kommittée] : Bankkonto kommittée debeteras, 1617 (Fordran StyrIT) krediteras.
+    \item [StyrIT betalar kommittée, hos StyrIT] : Bankkonto StyrIT krediteras,  skuld kommittée debeteras.
+\end{description}
+
+\section{Representation och Profilering}
+\subsection{Intern Representation}
+All teambuildning ni har räknas som intern representation, och bokförs på konto 4510 Intern Representation. Som underlag till bokföringshändelsen (förutom vanligt kvitto) ska det finnas ifylld medlemslista. 
+
+\section{iZettle och Swish}
+\subsection{iZettle}
+IZettle bokförs enligt modell: 
+\begin{description}
+    \item [Varan säljs, hos kommitté]: Bokförs i kommittéen som en intäkt på hela beloppet (intäkt krediteras), kostnad till iZettle på procentsatsen debeteras, och en fordran på styrIT debeteras. 
+    \item [iZettle sätter in på vårt konto, hos StyrIT]: Bankkonto StyrIT debeteras, skulder till kommittéen krediteras. 
+    \item [StyrIT betalar till kommitté, hos StyrIT]: Bankkonto StyrIT krediteras, skulden till kommittén debeteras
+    \item [StyrIT betalar till kommitté, hos kommitté]: Bankkonto kommitté debeteras, fordran till StyrIT krediteras.
+\end{description}
+\subsection{Swish}
+Swish bokförs enligt modell: 
+\begin{description}
+    \item [Varan säljs, hos kommitté]: Bokförs i kommittéen som en intäkt på hela beloppet (intäkt krediteras), kostnad till swish på procentsatsen debeteras, och en fordran på styrIT debeteras. 
+    \item [Swish sätter in på vårt konto, hos StyrIT]: Bankkonto Inkommande Swish debeteras, skulder till kommittéen krediteras och skulder till Swish krediteras. 
+    \item [StyrIT betalar till kommitté, hos StyrIT]: Bankkonto Inkommande Swish krediteras, skulden till kommittén debeteras
+    \item [StyrIT betalar till kommitté, hos kommitté]: Bankkonto kommitté debeteras, fordran till StyrIT krediteras.
+\end{description}
+
+\section{Bidrag och Lån från StyrIT}
+\subsection{Bidrag}
+Bidrag bokförs enbart av StyrIT, som överföring mellan konton. Bokförs alltså inte hos er! 
+\subsection{Lån}
+\begin{description}
+    \item [Lånet betalas ut, hos kommitté]: Bankkonto kommitté debeteras. 2917 (Skulder StyrIT) krediteras. 
+    \item [Lånet betalas ut, hos StyrIT]: Fordran kommitté debeteras. 1920 (Bankkonto StyrIT) krediteras.
+    \item [Lånet betalas tillbaka, hos kommitté]: 2917 (Skulder StyrIT) debeteras, bankkonto kommitté krediteras.
+    \item [Lånet betalas tillbaka, hos StyrIT]: 1920 (Bankkonto StyrIT) debeteras, fordran kommitté krediteras.
+\end{description}
+
+\section{Moms på varor - ENDAST arrangemang i gasquen}
+\textbf{Detta gäller enbart för arrangemang i gasquen och därmed enbart sexIT!}
+\subsection{Inköp av varor till sittningen}
+På kvittot står momssatsen och vad som är netto. Vi säger att ni har köpt en vara för 125 kr med momssats 12\%. 
+\begin{description}
+    \item [1922 - Bankkonto sexIT ]: 125 kr krediteras
+    \item [2641 - Ingående moms]: 13.39 kr debeteras
+    \item [3212 - Kostnader Gasque]: 111.61 kr debeteras
+\end{description}
+
+\subsection{Försäljning av sittningsbiljetter}
+Vid försäljning av sittningsbiljetter så behöver biljetten delas upp i två delar, en del utan dryck och en del med dryck. I detta exempel utgår vi från att biljetten utan dryck kostar 56kr (inkl. moms), och alkoholfri dryck 14 kr (inkl. moms), och alkoholhaltig dryck 34 kr (inkl. moms). All denna bokföring sker hos sexIT när försäljningen sker.
+\subsubsection{Alkoholfri dryck}
+\begin{description}
+    \item [1922 - Bankkonto sexIT ]: 70 kr debeteras
+    \item [2621 - Utgående moms på försäljning inom Sverige 12\%]: 7.5 kr krediteras
+    \item [3212 - Intäkter gasque]: 62.5 kr krediteras
+\end{description}
+\subsubsection{Med alkoholhaltig dryck}
+\begin{description}
+    \item [1922 - Bankkonto sexIT ]: 90 kr debeteras
+    \item [2611 - Utgående moms på försäljning inom Sverige 25\%]: 6.8 kr krediteras
+    \item [2621 - Utgående moms på försäljning inom Sverige 12\%]: 6 kr krediteras
+    \item [3212 - Intäkter gasque]: 77.2 kr krediteras
+\end{description}
+\subsubsection{Med Swish och alkoholfri dryck}
+Enbart första steget, resten följer som anges i swish-avsnittet. 
+\begin{description}
+    \item [1617 - Fordringar StyrIT ]: 68.5 kr debeteras
+    \item [2621 - Utgående moms på försäljning inom Sverige 12\%]: 7.5 kr krediteras
+    \item [3212 - Intäkter gasque]: 62.5 kr krediteras
+    \item [4313 - Kostnad Swish]: 1.5 kr debeteras
+\end{description}
+\section{Depositioner}
+\subsection{Vanlig}
+\begin{description}
+    \item [Deposition betalas in, hos PRIT]: 1931 (Bankkonto depositioner) debeteras. 2700 (Mottagna depositioner) krediteras.
+    \item [Depostioner betalas tillbaka, hos PRIT]: 1931 (Bankkonto depositioner) krediteras. 2700 (Mottagna depositioner) debeteras.
+\end{description}
+\subsection{Borttappande av nyckel}
+\begin{description}
+    \item [Deposition betalas ut, hos PRIT]: 1931 (Bankkonto depositioner) krediteras med 200 kr. 2700 (Mottagna depositioner) debeteras med 300 kr. 3232 (Intäkt nyckeldepositioner) krediteras med 100 kr.
+\end{description}
+
+
+\section{Interimskulder och fordringar}
+En interimskuld eller fordran gör när antingen en kostnad eller intäkt uppstår på fel bokföringsår. Detta kan exempelvis vara om man har haft ett arrangemang som man inte har fått fakturan för, eller om en kommittée vill börja teambuilda redan innan de officiellt har gått på. För detta används konto 2990 och 1790, som i princip säger att man har en skuld eller fordran mot sig själv. 
+
+\subsection{Interimskuld}
+Exempel om vi inte har fått fakturan för kandidatmiddagen på 1000 kr. 
+\begin{enumerate}
+\item Bokförs sista dagen på det verksamhetsåret kostnaden ska bokföras på.
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+2990 & Upplupna kostnader och förutbetalda intäkter & & 1 000,00 \\
+4211 & Kostnader Kandidatmiddag & 1 000,00 &  \\
+\end{tabular}
+
+\item Fakturan kommer till den nya kassören.   
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+2440 & Leverantörsskulder &  & 1 000,00\\
+2990 & Upplupna kostnader och förutbetalda intäkter & 1 000,00 &  \\
+\end{tabular}
+
+\item Fakturan betalas av nya kassören
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+1920 & Bankkonto StyrIT & & 1 000,00  \\
+2440 & Leverantörsskulder & 1 000,00 & \\
+\end{tabular}
+\end{enumerate}
+
+\subsection{Interimfordran}
+I detta exemplet har det varit en teambuilding innan verksamhetsåret börjar. Ett annat exempel kan vara att en faktura inte hann bli ivägskickad.  
+\begin{enumerate}
+\item Bokförs när teambuildingen sker.
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+2918 & Skulder medlemmar & & 450,00 \\
+1790 & Övriga förutbetalda kostnader och upplupna intäkter & 450,00 &  \\
+\end{tabular}
+
+\item Bokförs första dagen på det nya verksamhetsåret  
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+1790 & Övriga förutbetalda kostnader och upplupna intäkter &  & 450,00\\
+4510 & Kostnader Intern Representation & 450,00 &  \\
+\end{tabular}
+
+\item När skulden betalas ut till medlemmen, oavsett vilket år det betalas ut på
+
+\begin{tabular}{l | l | r | r}
+\hline
+Konto & Benämning & Debet & Kredit \\
+\hline
+1920 & Bankkonto StyrIT & & 450,00  \\
+2918 & Skulder medlemmar & 450,00 & \\
+\end{tabular}
+\end{enumerate}
+
+
+
+\section{Övriga fall}
+\subsection{Sunfleet}
+\begin{description}
+    \item [Bilen körs, hos kommitté]: Ingen bokföring. 
+    \item [Fakturan kommer till StyrIT, hos StyrIT]: 5610 (Kostnad Bil) debeteras för StyrITs körning och månadsavgiften, fordran på ev. övriga kommittéer för deras körning debeteras. Internfordran skickas samma dag (eller har åtminstone samma fordringsdatum och fakturadatumet från Sunfleet.). 2440 (Leverantörsskulder) krediteras.
+    \item [Fordran kommer till kommittée, hos kommittée]: 5610 (kostnad bil) debeteras, 2917 (skulder StyrIT) krediteras.
+    \item [StyrIT betalar fakturan, hos StyrIT]: 2440 (Leverantörsskulder) debeteras, bankkkonto StyrIT krediteras.
+    \item[Kommittée betalar till StyrIT, hos StyrIT]: Fordran kommittée krediteras, Bankkonto StyrIT debeteras.
+    \item[Kommittée betalar till StyrIT, hos Kommittée]: 2917 (skulder StyrIT) debeteras, bankkonto kommittée krediteras.
+\end{description}
+
+
+\subsection{Bidrag eller spons mellan kommitter för händelse}
+Varje år anordnas pedagogiska priset, där snIT brukar ge ett bidrag till sexIT för att de håller i sittningen. Detta, och liknande samarbeten, bokförs enligt följande, där KA ger pengar till KB. Då vi är en, och inte flera organisationer får det \textbf{inte} bokföras mot kostnader och intäkter.  
+\begin{description}
+    \item [Pengar förs över från KA till KB, hos KA]: Bankkonto KB debeteras, Bankkonto KA krediteras. Ange kostnadsstället på respektive kommittée vid respektive konto.
+    \item [Pengar förs över från KA till KB, hos KB]: Ingen bokföring. 
+\end{description}
+
+\subsection{Vidarefakturering - delad kostnad mellan parter}
+Om ni lägger ut för något som ska splittras mellan flera parter, ex. en annan sektion under ett gemensamt arr, ska ni göra något som kallas för vidarefakturering. I exemplet antas det att ni har betalat 2000kr och kostnaderna ska splittras lika mellan er (KA) och Y-sektionen. 
+\begin{description}
+    \item [IT betalar kostnaden, hos IT]: Bankkonto KA krediteras på 2000 kr, kostnadskontot debeteras på 1000 kr. , Bankkonto KA krediteras. Ange kostnadsstället på respektive kommittée vid respektive konto.
+    \item [Pengar förs över från KA till KB, hos KB]: Ingen bokföring. 
+\end{description}
+
+\section{Förkortningar}
+För att inte "inkommen faktura" ska behöva ta upp hela beskrivningsraden, så använder vi oss på IT av olika förkortningar. Dessa följer nedan: 
+\begin{description}
+    \item[FB] - Faktura betald (när du har betalar 
+    \item[FM] - Faktura mottagen
+    \item[FS] - Faktura skickad
+    \item[FI] - Faktura inbetald (när de betalar in)
+    \item[MU] - Medlemsutlägg uppkommen
+    \item[MB] - Medlemsutlägg betald
+    \item[IFU] - Internfordran uppkommen
+    \item[IFB] - Internfordran betald (antingen om du betalat eller om de betalar, men åtminstone att internfordran försvinner)
+
+\end{description}
+
+\end{document}
