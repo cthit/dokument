@@ -31,7 +31,6 @@ mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
 	$(latexmk) $<intygsmall/intygsmall.tex
-	$(latexmk) $<deltagarlista/deltagarlista.tex
 	$(latexmk) $<hedersmedlemsmall/hedersmedlemsmall.tex
 	$(latexmk) $<beslutsmall/beslutsmall.tex
 	$(latexmk) $<namnlista/namnlista.tex
