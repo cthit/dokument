@@ -1,0 +1,14 @@
+version: "2"
+services:
+    pdf:
+        image: pdf
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - ./build:/build
+        ports:
+            - 8080:80
+        environment:
+            - NGINX_HOST=localhost
+            - NGINX_PORT=80

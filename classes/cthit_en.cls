@@ -179,7 +179,7 @@
         \textbf{Chalmers University of Technology}
 
         \vspace{2cm}
-        \centerline{ \includegraphics[width=0.5\textwidth]{itlogo.eps}}
+        \centerline{ \includegraphics[width=0.5\textwidth]{itlogo.pdf}}
         \vspace{2cm}
         
         \Large
