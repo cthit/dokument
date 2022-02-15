@@ -19,7 +19,7 @@ bokningsvillkor: bokningsvillkor/bokningsvillkor.tex
 reglemente: reglemente/reglemente.tex
 	$(latexmk) $<
 
-policies: policies/mainmainmainmain
+policies: policies/
 	$(latexmk) $<ekonomisk_policy/ekonomisk_policy.tex
 	$(latexmk) $<lokalpolicy/lokalpolicy.tex
 	$(latexmk) $<mjukvarupolicy/mjukvarupolicy.tex
