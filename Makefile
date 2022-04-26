@@ -1,4 +1,4 @@
-.PHONY: all clean copy reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser
+.PHONY: all clean copy reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser bokningsvillkor
 
 # Note: the $< variable is the 1st "argument" to the target while
 # $@ is the target.
@@ -11,7 +11,10 @@ latexmk=latexmk -outdir=$(builddir)/$@ -f -pdf -xelatex -use-make-
 # The dir that the finished pdfs should be copied into. Relative to this filek
 copydir=../
 
-all: reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser
+all: reglemente policies stadga mallar intresseforeningar stoddokument hedersmedlemmar kassorsresurser bokningsvillkor
+
+bokningsvillkor: bokningsvillkor/bokningsvillkor.tex
+	$(latexmk) $<
 
 reglemente: reglemente/reglemente.tex
 	$(latexmk) $<
