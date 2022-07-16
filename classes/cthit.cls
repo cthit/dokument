@@ -140,6 +140,11 @@
   Fikaföreningen på IT‐sektionen, \FIKIT{}%
 }
 
+\DeclareDocumentCommand \TRADGARDSMASTERIT {}{\mbox{TrädgårdsmästerIT}}
+\DeclareDocumentCommand \TRADGARDSMASTERITFULL {}{%
+  Trädgårdsmästeriet på IT‐sektionen, \TRADGARDSMASTERIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
