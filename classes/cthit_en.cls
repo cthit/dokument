@@ -137,6 +137,11 @@
   Fika and baking society, \FIKIT{}%
 }
 
+\DeclareDocumentCommand \TRADGARDSMASTERIT {}{\mbox{TrädgårdsmästerIT}}
+\DeclareDocumentCommand \TRADGARDSMASTERITFULL {}{%
+  Gardening committee, \TRADGARDSMASTERIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
