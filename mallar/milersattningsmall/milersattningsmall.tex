@@ -1,0 +1,63 @@
+\documentclass[11pt, includeaddress]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\usepackage{pgfkeys}
+
+% Set up the keys.  Only the ones directly under /mytextfield
+% can be accepted as options to the \mytextfield macro.
+\pgfkeys{
+ /mytextfield/.is family, /mytextfield,
+ % Here are the options that a user can pass
+ default/.style = 
+  {borderwidth = 0, dotwidth = 2cm, name=herp},
+ borderwidth/.estore in = \mytextfieldBorderwidth,
+ dotwidth/.estore in = \mytextfieldDotwidth,
+ name/.estore in = \mytextfieldName,
+}
+
+\newdimen\longline
+\longline=\textwidth\advance\longline-6cm
+\def\LayoutTextField#1#2{#2} % override default in hyperref
+
+\def\lbl#1{\hbox to \mytextfieldDotwidth{#1\dotfill\strut}}%
+\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=\mytextfieldName,width=#2, borderwidth=\mytextfieldBorderwidth]{\null}}\kern2pt\hrule}}
+
+% We process the options first, then pass them to `\parbox` in the form of macros.
+\newcommand\mytextfield[2][]{%
+ \pgfkeys{/mytextfield, default, #1}%
+ \hbox to \hsize{\labelline{#2}{\longline}}\vskip1.4ex
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+\begin{Form}
+
+\title{Milersättning}
+
+\makeheadfoot%
+\makeheadfoot%
+
+\section*{Milersättning}
+
+\mytextfield[name=name, dotwidth=6cm]{Namn:}
+\mytextfield[name=date, dotwidth=6cm]{Datum:}
+\mytextfield[name=start, dotwidth=6cm]{Mätarställning start (km):}
+\mytextfield[name=end, dotwidth=6cm]{Mätarställning slut (km):}
+\mytextfield[name=dist, dotwidth=6cm]{Distans (mil):}\\\\
+
+Rutt:\\
+\TextField[multiline,name=route,width=\textwidth,height=2cm,bordercolor=black]{\mbox{ }}
+Beskrivning:\\
+\TextField[multiline,name=desc,,width=\textwidth,height=2cm,bordercolor=black]{\mbox{ }}
+
+\newpage
+
+\end{Form}
+\end{document}
