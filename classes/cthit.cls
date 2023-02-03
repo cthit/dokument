@@ -145,6 +145,11 @@
   Trädgårdsmästeriet på IT‐sektionen, \TRADGARDSMASTERIT{}%
 }
 
+\DeclareDocumentCommand \MOTESPRESIDIT {}{\mbox{MötespresidIT}}
+\DeclareDocumentCommand \MOTESPRESIDITFULL {}{%
+  Sektionsmötespresidiet på IT‐sektionen, \MOTESPRESIDIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
