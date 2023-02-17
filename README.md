@@ -1,21 +1,27 @@
-Dokument
-========
+# Dokument
 
-Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola
+Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola. Det inkluderar bl.a. styrdokument och riktlinjer.
 
+De publicerade dokumenten kan hittas på http://docs.chalmers.it/. Nya ändringar är inte alltid uppdaterade, eftersom de behöver läggas upp manuellt. Då finns alltid de senaste ändringarna här på GitHub.
 
-> **Note:**
-> Relative paths used within documents must originate from the document root. I.e. where the *Makefile* is located
+## Bygga med Docker
 
+Det bör vara enkelt att bygga en live-version av dokumenten i en Docker container. Den kan sedan publiceras på portainer.
 
-Kompilerade dokument finns på http://docs.chalmers.it/
+```
+docker build -t <name:tag> .
+```
+
+## Publicera nya ändringar
+
+Nya ändringar behöver manuellt byggas och publiceras. Det behöver göras av någon (förmodligen digIT) som har rättigheter att lägga upp och ändra Docker containers på portainer. Instruktioner finns på https://docker.chalmers.it hur man ska tagga en container för att ladda upp den.
+
+## Göra ändringar
 
 För att göra ändringar finns två alternativ:
 
 1. Ladda ner allt och gör det till en ZIP-fil som du sedan laddar in i sharelatex. Gör ändringarna och ladda ner det nya och pusha det till github.
 2. Kör det lokalt genom att skriva "make", se till att du har latex installerat lokalt.
 
-Det som ligger på master kompileras och laddas automagiskt upp så du behöver inte göra något för att ändra innehållet på http://docs.chalmers.it/
-
-**OBS!**: \\
+**OBS!**
 Dessa dokument behöver också kompileras med XeTeX kompilatorn. (I overleaf kan man välja detta genom att klicka på Menu -> Compiler och sedan välja XeTeX i listan.)
