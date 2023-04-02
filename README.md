@@ -6,7 +6,13 @@ De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändring
 
 ## Bygga med Docker
 
-Det bör vara enkelt att bygga en live-version av dokumenten i en Docker container. Den kan sedan publiceras på portainer.
+Första gången projektet klonas med `git clone` så behöver submodulerna (bokningsvillkor) också hämtas med följande git kommand:
+
+```
+git submodule update --init --recursive
+```
+
+Sedan bör det vara enkelt att bygga en live-version av dokumenten i en Docker container. Efter det kan den publiceras på portainer.
 
 ```
 docker build -t <name:tag> .
