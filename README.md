@@ -2,7 +2,7 @@
 
 Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola. Det inkluderar bl.a. styrdokument och riktlinjer.
 
-De publicerade dokumenten kan hittas på http://docs.chalmers.it/. Nya ändringar är inte alltid uppdaterade, eftersom de behöver läggas upp manuellt. Då finns alltid de senaste ändringarna här på GitHub.
+De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändringar är inte alltid uppdaterade, eftersom de behöver läggas upp manuellt. Då finns alltid de senaste ändringarna här på GitHub.
 
 ## Bygga med Docker
 
