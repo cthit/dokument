@@ -125,9 +125,9 @@
   Film- och fotokommittén Informationsteknik, \FLASHIT{}%
 }
 
-\DeclareDocumentCommand \MRCIT {}{\mbox{MRCIT}}
+\DeclareDocumentCommand \MRCIT {}{\mbox{MrKIT}}
 \DeclareDocumentCommand \MRCITFULL {}{%
-  Master Reception Committee Information Technology, \MRCIT{}%
+  Mastermottagningskommittén på IT, \MRCIT{}%
 }
 
 \DeclareDocumentCommand \EQUALIT {}{\mbox{EqualIT}}
