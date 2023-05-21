@@ -125,9 +125,9 @@
   Film- och fotokommittén Informationsteknik, \FLASHIT{}%
 }
 
-\DeclareDocumentCommand \MRCIT {}{\mbox{MRCIT}}
+\DeclareDocumentCommand \MRCIT {}{\mbox{MrKIT}}
 \DeclareDocumentCommand \MRCITFULL {}{%
-  Master Reception Committee Information Technology, \MRCIT{}%
+  Mastermottagningskommittén på IT, \MRCIT{}%
 }
 
 \DeclareDocumentCommand \EQUALIT {}{\mbox{EqualIT}}
@@ -148,6 +148,11 @@
 \DeclareDocumentCommand \MOTESPRESIDIT {}{\mbox{MötespresidIT}}
 \DeclareDocumentCommand \MOTESPRESIDITFULL {}{%
   Sektionsmötespresidiet på IT‐sektionen, \MOTESPRESIDIT{}%
+}
+
+\DeclareDocumentCommand \CLOUDLORDS {}{\mbox{Cloudlords}}
+\DeclareDocumentCommand \CLOUDLORDSFULL {}{%
+  Rustkommitén för The Cloud på Lindholmen, \FIKIT{}%
 }
 
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%

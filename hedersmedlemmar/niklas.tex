@@ -1,0 +1,60 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Hedersmedlemskapsdiplom}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Niklas Broberg}}
+\end{center}
+\vspace{1cm}
+\subsection*{}
+Intyg att Niklas Broberg har utnämnts till hedersmedlem hos Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola datumet 2023-02-23 med motiveringen: 
+\\
+\textit{
+``Niklas Broberg väljs till hedersmedlem av sektionen för det arbete han gjort för sektionen, dels under sina år som programansvarig men även under åren i programmets uppstart. Han arbetade hårt för att göra programmet mer inklu- derande för alla studenter genom att driva jämlikhetsfrågor och utredningar av kursmaterial i samarbete med sektionen. Med sin delaktighet i skapandet av programmet lade han redan då grunden för mycket av hur programmet och sektionen ser ut idag, något som fortsatte under åren som programansvarig då han bland mycket annat formade kursen i grundläggande programmering som blev ett tryggt första steg in på Chalmers för alla nyantagna. Inom sektionslivet var Niklas alltid stöttande och har deltagit på många av sektionens arrangemang och förgyllt dem med trevliga sånger. Niklas har varit väldigt betydelsefull för många av sektionens medlemmar och har gjort mer för sektionen än vad som förväntats av hans uppdrag som i sin tur har format hur sektionen ser ut än idag.''
+}
+\\
+En hedersmedlem är en person som synnerligen främjat teknologsektionens intressen och strävanden. Hos Teknologsektionen Informationsteknik har endast två tidigare personer utnämnts till hedersmedlem under sektionens hela 15 år.
+
+\vspace{4cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Jacob Bengtsson}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+\end{document}
