@@ -150,6 +150,11 @@
   Sektionsmötespresidiet på IT‐sektionen, \MOTESPRESIDIT{}%
 }
 
+\DeclareDocumentCommand \CLOUDLORDS {}{\mbox{Cloudlords}}
+\DeclareDocumentCommand \CLOUDLORDSFULL {}{%
+  Rustkommitén för The Cloud på Lindholmen, \FIKIT{}%
+}
+
 \DeclareDocumentCommand \MYhref { O{linkblue} m m }{%
   \href{#2}{\color{#1}{#3}}%
 }
