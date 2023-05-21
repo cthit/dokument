@@ -9,18 +9,22 @@ De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändring
 Första gången projektet klonas med `git clone` så behöver submodulerna (bokningsvillkor) också hämtas med följande git kommand:
 
 ```
-git submodule update --init --recursive
+git submodule foreach --recursive git pull origin main
 ```
 
-Sedan bör det vara enkelt att bygga en live-version av dokumenten i en Docker container. Efter det kan den publiceras på portainer.
+Sedan bör det vara enkelt att bygga en live-version av dokumenten i en Docker container. Efter det kan den publiceras på portainer. Byt ut `<tag>` mot något unikt, exempelvis dagens datum.
 
 ```
-docker build -t <name:tag> .
+docker build -t docker.chalmers.it/dokument:<tag> .
 ```
 
 ## Publicera nya ändringar
 
-Nya ändringar behöver manuellt byggas och publiceras. Det behöver göras av någon (förmodligen digIT) som har rättigheter att lägga upp och ändra Docker containers på portainer. Instruktioner finns på https://docker.chalmers.it hur man ska tagga en container för att ladda upp den.
+Nya ändringar behöver manuellt byggas och publiceras, se ovanstående punkt. Det behöver göras av någon (förmodligen digIT) som har rättigheter att lägga upp och ändra Docker containers på portainer.
+
+Instruktioner finns på https://docker.chalmers.it hur man ska tagga en container för att ladda upp den.
+
+När imagen är uppladdad så ska dokument stacken i portainer byta till den nya imagen och byggas om.
 
 ## Göra ändringar
 
