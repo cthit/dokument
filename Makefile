@@ -47,6 +47,7 @@ stoddokument: stoddokument/
 	$(latexmk) $<digital_moteshallning.tex
 	$(latexmk) $<ordlista.tex
 	$(latexmk) $<sektionsmoteshandbok.tex
+	$(latexmk) $<nyckelkontrakt.tex
 
 hedersmedlemmar: hedersmedlemmar/
 	$(latexmk) $<anette.tex
