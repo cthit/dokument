@@ -1,0 +1,165 @@
+name: Build documents
+
+on:
+  workflow_call:
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  stadga:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: stadga
+      latex_build_entry: stadga/stadga.tex
+
+  reglemente:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: reglemente
+      latex_build_entry: reglemente/reglemente.tex
+
+  bokningsvillkor:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: bokningsvillkor
+      latex_build_entry: bokningsvillkor/bokningsvillkor.tex
+
+  ###### Policies ######
+  ekonomisk_policy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: ekonomisk_policy
+      latex_build_entry: policies/ekonomisk_policy/ekonomisk_policy.tex
+
+  lokalpolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: lokalpolicy
+      latex_build_entry: policies/lokalpolicy/lokalpolicy.tex
+
+  mjukvarupolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: mjukvarupolicy
+      latex_build_entry: policies/mjukvarupolicy/mjukvarupolicy.tex
+
+  kommunikationspolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: kommunikationspolicy
+      latex_build_entry: policies/kommunikationspolicy/kommunikationspolicy.tex
+
+  uppforandepolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: uppforandepolicy
+      latex_build_entry: policies/uppforandepolicy/uppforandepolicy.tex
+
+  miljopolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: miljopolicy
+      latex_build_entry: policies/miljopolicy/miljopolicy.tex
+
+  ###### Mallar ######
+  askningsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: askningsmall
+      latex_build_entry: mallar/askningsmall/askningsmall.tex
+
+  motionsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: motionsmall
+      latex_build_entry: mallar/motionsmall/motionsmall.tex
+
+  intygsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: intygsmall
+      latex_build_entry: mallar/intygsmall/intygsmall.tex
+
+  hedersmedlemsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: hedersmedlemsmall
+      latex_build_entry: mallar/hedersmedlemsmall/hedersmedlemsmall.tex
+
+  beslutsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: beslutsmall
+      latex_build_entry: mallar/beslutsmall/beslutsmall.tex
+
+  namnlista:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: namnlista
+      latex_build_entry: mallar/namnlista/namnlista.tex
+
+  nomineringsmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: nomineringsmall
+      latex_build_entry: mallar/nomineringsmall/nomineringsmall.tex
+
+  ###### Intresseföreningar ######
+  # Fick inte ha 8 i namnet :(
+  eight-bit-stadga:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: 8-bit_stadga
+      latex_build_entry: intresseforeningar/8-bit/8-bit_stadga.tex
+
+  fikit-stadga:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: FikIT_stadga
+      latex_build_entry: intresseforeningar/FikIT/FikIT_stadga.tex
+
+  ###### Stöddokument ######
+  digital_moteshallning:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: digital_moteshallning
+      latex_build_entry: stoddokument/digital_moteshallning.tex
+
+  ordlista:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: ordlista
+      latex_build_entry: stoddokument/ordlista.tex
+
+  sektionsmoteshandbok:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: sektionsmoteshandbok
+      latex_build_entry: stoddokument/sektionsmoteshandbok.tex
+
+  ###### Hedersmedlemmar ######
+  anette:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: anette
+      latex_build_entry: hedersmedlemmar/anette.tex
+
+  wolfgang:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: wolfgang
+      latex_build_entry: hedersmedlemmar/wolfgang.tex
+
+  samuel:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: samuel
+      latex_build_entry: hedersmedlemmar/samuel.tex
+
+  niklas:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: niklas
+      latex_build_entry: hedersmedlemmar/niklas.tex
