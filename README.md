@@ -2,29 +2,7 @@
 
 Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola. Det inkluderar bl.a. styrdokument och riktlinjer.
 
-De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändringar är inte alltid uppdaterade, eftersom de behöver läggas upp manuellt. Då finns alltid de senaste ändringarna här på GitHub.
-
-## Bygga med Docker
-
-Första gången projektet klonas med `git clone` så behöver submodulerna (bokningsvillkor) också hämtas med följande git kommand:
-
-```
-git submodule foreach --recursive git pull origin main
-```
-
-Sedan bör det vara enkelt att bygga en live-version av dokumenten i en Docker container. Efter det kan den publiceras på portainer. Byt ut `<tag>` mot något unikt, exempelvis dagens datum.
-
-```
-docker build -t docker.chalmers.it/dokument:<tag> .
-```
-
-## Publicera nya ändringar
-
-Nya ändringar behöver manuellt byggas och publiceras, se ovanstående punkt. Det behöver göras av någon (förmodligen digIT) som har rättigheter att lägga upp och ändra Docker containers på portainer.
-
-Instruktioner finns på https://docker.chalmers.it hur man ska tagga en container för att ladda upp den.
-
-När imagen är uppladdad så ska dokument stacken i portainer byta till den nya imagen och byggas om.
+De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändringar är publiceras automatiskt när de pushas till master-branchen.
 
 ## Göra ändringar
 
@@ -35,3 +13,24 @@ För att göra ändringar finns två alternativ:
 
 **OBS!**
 Dessa dokument behöver också kompileras med XeTeX kompilatorn. (I overleaf kan man välja detta genom att klicka på Menu -> Compiler och sedan välja XeTeX i listan.)
+
+### Lägga till nytt dokument
+
+Om du har lagt till ett nytt dokument så måste du lägga till det i Makefile. Detta görs genom att lägga till en rad i Makefile som ser ut som följande. (Detta är för att vi använder oss av latexmk för att kompilera dokumenten. Och lokalt krävs detta.)
+
+```makefile
+TYP_AV_DOKUMENT: /VÄG/TILL/DOKUMENT/TYP
+	$(latexmk) $<VÄG/FRÅN/TYP/TILL/FIL.tex
+  # Om det är det enda dokumentet av denna typ (likt stadga eller reglemente) får du istället skriva:
+  $(latexmk) $<
+```
+
+Vidare, om du vill att ditt dokument skall läggas till som publicerat måste du gå in i `.github/workflows/build_all.yml` och lägga till följande (på rimlig plats, finns kommentarer som delar upp sektioner):
+
+```yml
+DOKUMENT_NAMN: # Får inte innehålla mellanslag, siffror eller specialtecken
+  uses: ./.github/workflows/build_document.yml
+  with:
+    document_name: DOKUMENT_NAMN # Detta är namnet på dokumentet, som blir namnet på pdf-filen
+    latex_build_entry: VÄG/TILL/FIL.tex # Detta är sökvägen till latex-filen som skall kompileras
+```
