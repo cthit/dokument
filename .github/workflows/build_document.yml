@@ -1,0 +1,31 @@
+name: Build PDF
+
+on:
+  workflow_call:
+    inputs:
+      document_name:
+        required: true
+        type: string
+      latex_build_entry:
+        required: true
+        type: string
+
+jobs:
+  build-document:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Build latex
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: ${{ inputs.latex_build_entry }}
+          args: -jobname=${{ inputs.document_name }}
+          latexmk_use_xelatex: true
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.document_name }}
+          path: ${{ inputs.document_name }}.pdf
