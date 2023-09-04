@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Pages
+      - name: Configure GitHub Pages 
         uses: actions/configure-pages@v3
 
       - name: Get pdfs
@@ -45,20 +45,26 @@ jobs:
           find ./pdfs -mindepth 2 -type f -print -exec mv {} ./pdfs \;
           find ./pdfs -type d -empty -delete
 
-      - name: Create pdf index
+      - name: Clean all files and folders except .pdfs
         run: |
-          echo "$(cat upper_template.html)" > pdfs/index.html
-          cd pdfs
-          for f in *.pdf; do
-            echo "<a href=\"$f\"><li>$f</li></a>" >> index.html
-          done
-          echo "</ul></body></html>" >> index.html
+          find . -not -path "./pdfs/*" -not -name "pdfs" -not -name "." -delete
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Build page
+        uses: actions/checkout@v3
         with:
-          path: './pdfs'
+          repository: cthit/dokument-site
 
+      - name: Move .pdfs to public folder
+        run: |
+          mkdir public
+          mv pdfs/* public
+
+      - name: Install, build, and upload your site output
+        uses: withastro/action@v0
+        with:
+          path: src
+          package-manager: pnpm
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
