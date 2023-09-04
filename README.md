@@ -3,6 +3,8 @@
 Dokument tillhörande Teknologsektionen Informationsteknik på Chalmers tekniska högskola. Det inkluderar bl.a. styrdokument och riktlinjer.
 
 De publicerade dokumenten kan hittas på https://docs.chalmers.it/. Nya ändringar är publiceras automatiskt när de pushas till master-branchen.
+Sidan är byggd med hjälp av [Astro](https://astro.build/), som är en statisk webbsidesgenerator.
+Repot för sidan finns [här](https://github.com/cthit/dokument-site). 
 
 ## Göra ändringar
 
