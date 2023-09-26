@@ -139,6 +139,12 @@ jobs:
       document_name: sektionsmoteshandbok
       latex_build_entry: stoddokument/sektionsmoteshandbok.tex
 
+  nyckelkontrakt:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: nyckelkontrakt
+      latex_build_entry: stoddokument/nyckelkontrakt.tex
+
   ###### Hedersmedlemmar ######
   anette:
     uses: ./.github/workflows/build_document.yml
