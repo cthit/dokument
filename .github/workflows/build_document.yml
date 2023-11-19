@@ -12,7 +12,6 @@ on:
       build_working_directory:
         required: false
         type: string
-        default: '.'
 
 jobs:
   build-document:
@@ -28,10 +27,9 @@ jobs:
           root_file: ${{ inputs.latex_build_entry }}
           args: -jobname=${{ inputs.document_name }}
           latexmk_use_xelatex: true
-          work_in_root_file_dir: ${{ inputs.build_working_directory }}
+          work_in_root_file_dir: ${{ inputs.build_working_directory || github.workspace }}
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.document_name }}
-          # path with working directory
-          path: ${{ inputs.build_working_directory }}/${{ inputs.document_name }}.pdf
+          path: ${{ inputs.build_working_directory || github.workspace}}/${{ inputs.document_name }}.pdf
