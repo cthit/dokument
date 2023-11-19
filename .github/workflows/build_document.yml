@@ -9,6 +9,9 @@ on:
       latex_build_entry:
         required: true
         type: string
+      build_working_directory:
+        required: false
+        type: string
 
 jobs:
   build-document:
@@ -18,6 +21,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Change working directory
+        if: ${{ inputs.build_working_directory != '' }}
+        run: cd ${{ inputs.build_working_directory }}
       - name: Build latex
         uses: xu-cheng/latex-action@v2
         with:
