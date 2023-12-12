@@ -9,6 +9,9 @@ on:
       latex_build_entry:
         required: true
         type: string
+      build_working_directory:
+        required: false
+        type: string
 
 jobs:
   build-document:
@@ -24,6 +27,10 @@ jobs:
           root_file: ${{ inputs.latex_build_entry }}
           args: -jobname=${{ inputs.document_name }}
           latexmk_use_xelatex: true
+          work_in_root_file_dir: ${{ inputs.build_working_directory }}
+      - name: Move PDF if created in working directory
+        if: ${{ inputs.build_working_directory != '' }}
+        run: mv ${{ inputs.build_working_directory }}/${{ inputs.document_name }}.pdf ${{ inputs.document_name }}.pdf
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
