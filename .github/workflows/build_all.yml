@@ -76,6 +76,12 @@ jobs:
       document_name: motionsmall
       latex_build_entry: mallar/motionsmall/motionsmall.tex
 
+  intervjuutskicksmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: intervjuutskicksmall
+      latex_build_entry: mallar/intervjuutskicksmall/intervjuutskicksmall.tex
+
   intygsmall:
     uses: ./.github/workflows/build_document.yml
     with:
