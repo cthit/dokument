@@ -6,6 +6,7 @@
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
 
+
 \renewcommand{\thesection}{\S \arabic{section}}
 
 \graphicspath{ {images/} }
@@ -41,6 +42,15 @@
 
 %Rubriksnivådjup
 \setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Additional subparagraph levels
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+
 %Sidnumreringsstart
 \setcounter{page}{1}
 
@@ -63,7 +73,7 @@
 \newpage
 \input{reglemente/organ.tex} % Sektionsorgan
 \newpage
-\input{reglemente/funktionarer.tex} % Sektionsfunktionärer
+\input{reglemente/arbetgrupper.tex} % Arbetgrupper 
 \newpage
 \input{reglemente/stodmedlemsavgift} % Stödmedlemsavgift
 \newpage
