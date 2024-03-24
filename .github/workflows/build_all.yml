@@ -71,6 +71,12 @@ jobs:
       document_name: askningsmall
       latex_build_entry: mallar/askningsmall/askningsmall.tex
 
+  milersattningssmall:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: milersattningssmall
+      latex_build_entry: mallar/milersattningssmall/milersattningssmall.tex
+      
   motionsmall:
     uses: ./.github/workflows/build_document.yml
     with:

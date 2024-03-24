@@ -32,6 +32,7 @@ stadga: stadga/stadga.tex
 
 mallar: mallar/
 	$(latexmk) $<askningsmall/askningsmall.tex
+	$(latexmk) $<milersattningsmall/milersattningsmall.tex
 	$(latexmk) $<motionsmall/motionsmall.tex
 	$(latexmk) $<intygsmall/intygsmall.tex
 	$(latexmk) $<hedersmedlemsmall/hedersmedlemsmall.tex
