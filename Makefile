@@ -26,6 +26,7 @@ policies: policies/
 	$(latexmk) $<kommunikationspolicy/kommunikationspolicy.tex
 	$(latexmk) $<uppforandepolicy/uppforandepolicy.tex
 	$(latexmk) $<miljopolicy/miljopolicy.tex
+	$(latexmk) $<asppolicy/asppolicy.tex
 
 stadga: stadga/stadga.tex
 	$(latexmk) $<
