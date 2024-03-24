@@ -75,7 +75,7 @@ jobs:
     uses: ./.github/workflows/build_document.yml
     with:
       document_name: milersattningssmall
-      latex_build_entry: mallar/milersattningssmall/milersattningssmall.tex
+      latex_build_entry: mallar/milersattningsmall/milersattningsmall.tex
       
   motionsmall:
     uses: ./.github/workflows/build_document.yml
