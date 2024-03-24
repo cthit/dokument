@@ -64,6 +64,12 @@ jobs:
       document_name: miljopolicy
       latex_build_entry: policies/miljopolicy/miljopolicy.tex
 
+  asppolicy:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: asppolicy
+      latex_build_entry: policies/asppolicy/asppolicy.tex
+
   ###### Mallar ######
   askningsmall:
     uses: ./.github/workflows/build_document.yml
