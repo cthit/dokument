@@ -31,6 +31,8 @@
 \RequirePackage[includeheadfoot, top=2.0cm, bottom=4cm]{geometry}
 \RequirePackage{xparse}
 \RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+
 
 \RequirePackage{pdfpages}
 
@@ -179,6 +181,10 @@
   \DeclareDocumentCommand \@authors {}{#1}
 }
 
+\DeclareDocumentCommand \headerImage {m} {%
+  \DeclareDocumentCommand \@headerImage {}{#1}
+}
+
 \DeclareDocumentCommand \maketitle {} {%
   
       \begin{center}
@@ -197,7 +203,18 @@
         \textbf{Chalmers tekniska högskola}
 
         \vspace{2cm}
-        \centerline{ \includegraphics[width=0.5\textwidth]{itlogo.pdf}}
+
+        % Uncomment to define \@approved and test
+        % \newcommand{\@approved}{2021-06-15}
+        
+        
+        \ifthenelse{\isundefined{\@headerImage}}{ % Check if @headerImage is undefined
+            \centerline{ \includegraphics[width=0.5\textwidth]{images/itlogo.eps}} % Default image
+        }{
+            \centerline{ \includegraphics[width=0.5\textwidth]{\@headerImage}} % Use defined image
+        }
+
+
         \vspace{2cm}
         
         \Large
@@ -210,7 +227,6 @@
         \ifdef{\@approved}{{Antagen: \@approved \\}}{}
         \ifdef{\@revisioned}{{Reviderad: \@revisioned}}{}
         \ifdef{\@editorial}{{Redaktionell revidering: \@editorial}}{}
-        
         
     \end{center}
 }
