@@ -62,11 +62,11 @@ jobs:
           rm -rf pdfs
 
       - name: Install, build and upload site output
-        uses: withastro/action@v0
+        uses: withastro/action@v2
         with:
           path: site
-          package-manager: pnpm
-      
+          package-manager: pnpm@latest # Should probably be gotten from dokument-site repo instead.
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
