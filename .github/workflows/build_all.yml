@@ -3,9 +3,9 @@ name: Build documents
 on:
   workflow_call:
 
-  pull_request:
-    branches:
-      - master
+  # pull_request:
+  #   branches:
+  #     - master
 
 jobs:
   stadga:
@@ -82,7 +82,7 @@ jobs:
     with:
       document_name: milersattningssmall
       latex_build_entry: mallar/milersattningsmall/milersattningsmall.tex
-      
+
   motionsmall:
     uses: ./.github/workflows/build_document.yml
     with:
