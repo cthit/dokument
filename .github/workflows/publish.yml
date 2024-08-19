@@ -24,6 +24,9 @@ jobs:
     uses: ./.github/workflows/build_all.yml
 
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,11 +65,10 @@ jobs:
           rm -rf pdfs
 
       - name: Install, build and upload site output
-        uses: withastro/action@v0
+        uses: withastro/action@v2
         with:
           path: site
-          package-manager: pnpm
-      
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
