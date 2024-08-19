@@ -3,9 +3,9 @@ name: Build documents
 on:
   workflow_call:
 
-  # pull_request:
-  #   branches:
-  #     - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   stadga:
