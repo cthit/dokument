@@ -158,6 +158,12 @@ jobs:
       document_name: sektionsmoteshandbok
       latex_build_entry: stoddokument/sektionsmoteshandbok.tex
 
+  sektionsmotesordning:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: sektionsmotesordning
+      latex_build_entry: stoddokument/sektionsmotesordning.tex
+
   nyckelkontrakt:
     uses: ./.github/workflows/build_document.yml
     with:
