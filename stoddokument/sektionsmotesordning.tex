@@ -1,0 +1,270 @@
+\documentclass[11pt, includeaddress]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{verbatimbox}
+\usepackage{enumitem}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{2.25ex plus 1ex minus 0.2ex}{0.5em}
+\titlespacing*{\section}{0pt}{2.25ex plus 1ex minus 0.2ex}{0.5em}
+\titlespacing*{\subsection}{0pt}{2.25ex plus 1ex minus 0.2ex}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{2.25ex plus 1ex minus 0.2ex}{0.5em}
+
+\renewcommand{\abstractname}{Resumen}
+
+%\titleformat{\section}{\normalfont\Large\bfseries}{\S\thesection}{1em}{}
+
+%\contentslabel[\S \thecontentslabel]{2em}
+\titlelabel{\S \thetitle\quad}
+%\renewcommand{\thesection}{\S \arabic{section}}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Sektionsmötesordning}
+%\approved{2003--01--27}
+%\revisioned{YYYY--MM-DD}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+\newpage
+\thispagestyle{empty}
+
+\section*{Förord}
+Detta dokument är ämnat som ett förslag på mötesordning till sektionsmöten.
+Mötet kan besluta avvikelser från detta dokument inför varje mötesinstans.
+Mötet kan besluta att revidera bestämmelser om mötesordning under mötet.
+I dokumentet används termerna sektionsmöte, sektionsmötesmedlem, sektionsmötesordförande och mötessekreterare synonymt med möte, mötesmedlem, mötesordförande och mötessekreterare, i respektive ordning.
+Mötesordförande har beslutsrätt om tolkningsfrågor.
+\if False
+\subsection*{Saker att ändra med motionen:}
+\begin{itemize}
+    \item Ta bort 1.3 i reglementet.
+    \item Lägg till ´´fastställande av mötesordningen'' och ´´frågor till sektionsmötet'' under 1.2 i reglementet
+    \item Lägg till det här dokumentet
+    \item Lägg till att styrIT måste svara på motioner och interpellationer (kolla Handboken 4.2.1)
+    \item Närvaro och yttranderätt, fråga styrIT
+\end{itemize}
+\subsection*{Notes}
+\begin{itemize}
+    \item Mot och prop anslås 3+d enl. S§4.3.3
+    \item Motioner kommer in 7+d enl. S§4.6
+    \item protokoll fastställs 10-d end S§4.10
+    \item RevBerett 3+ enl. S§15.2.1
+    \item Bokföring 15+ enl. S§15.1.3
+    \item Vrappe, Vberett, EBerett R§1.2 (typ)
+\end{itemize}
+\fi
+\newpage
+%Rubriksnivådjup
+\setcounter{tocdepth}{2}
+%Sidnumreringsstart
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+\newpage
+\section{Mötesfunktionärer}
+Samtliga mötesfunktionärer är valda av mötet. Deras uppdrag avsutas när mötesprotokollet är justerat och publicerat. Mötesfunktionärer är mötet undersåtliga och mötesmedlemmar kan lyfta frågan att avsätta tillika fylla post till mötesfunktionär utanför talordningen. Dessa behandlas som ordningsfrågor. I fall då mötesfunktionärer saknas kan mötesmedlemmar lyfta frågan om personval till posten.
+Detta behandlas då också som en ordningsfråga.
+\subsection{Mötesordförande}
+Mötet har en mötesordförande. Följande rättigheter och skyldigheter befaller mötesordförande:
+\begin{itemize}
+    \item Mötesordförande leder mötet och fördelar ordet under diskussioner.
+    \item Mötesordförande bör vara påläst om stadgar, reglemente, samt kunnig i mötesordningen.
+    \item Mötesordförande bör arbeta för att korta ner mötet utan att negativt påverka mötets integritet.
+    \item Mötesordförande har rätten att under mötet:
+    \begin{itemize}
+        \item Lyfta diskussioner utanför sakfråga.
+        \item Yrka på ändringar i mötesdagordningen tillika mötesordningen. Dessa behandlas som ordningsfrågor. Ändringar beslutas av sektionsmötet.
+        \item Kräva omröstning då antalet avgivna röster inte uppfyller kraven för beslutförhet enligt stadgarna.
+        \item Hoppa över moment om hen dömmer det passande.
+        \item Lägga till moment om hen dömmer det passande.
+    \end{itemize}
+\end{itemize}
+\subsection{Mötessekreterare}
+Mötet har minst en mötessekreterare. Följande rättigheter och skyldigheter befaller mötessekreterare:
+\begin{itemize}
+    \item Mötessekreterare för protokoll under mötet, samt sammanställer anteckningar till ett mötesprotokoll.
+    \item Protokollet skall reflektera de beslut som togs under mötet, samt sammanfatta diskussioner. Protokoll om annat än beslut under personval först ej.
+\end{itemize}
+\subsection{Justerare}
+Mötet har två justerare tillika rösträknare. Följande rättigheter och skylldigheter befaller justerare tillika rösträknare:
+\begin{itemize}
+    \item Justerare tillika rösträknare kontrollerar efter mötet att protokollet är en korrekt dokumentation av de beslut som togs på mötet.
+    \item Justerare tillika rösträknare beräknar röstlängden för mötet.
+    \item Justerare tillika rösträknare tillhandhar VoteIT.
+    \item Justerare tillika rösträknare är behjälpliga under rösträkning.
+\end{itemize}
+Då rösträknare beräknar röstlängden eller antalet angivna röster räknar rösträknarna dessa separat och presenterar respektive resultat till mötessekreterare.
+Ifall resultaten inte stämmer överens görs en omräkning.
+Revidering av röstlängden kan begäras av enskild mötesmedlem
+\section{Diskussion}
+\subsection{Begärande av ordet}
+Ordet begärs genom handuppräckning eller digital talarlista och delas
+i tur och ordning ut av mötesordförande.
+\subsection{Replik}
+Om ett anförande berör en speciell person har denne rätt att be om replik.
+Replik beviljas av mötesordförande.
+Replik skall hållas i direkt anslutning till anförandet.
+En kontrareplik kan även beviljas.
+Kontra-kontra-replik beviljas ej.
+
+Replik kan även ges till en grupp. I dessa fall beviljas replik till en enskild person inom gruppen.
+Mötesordförande kan bevilja undantag där flera personer från den benämnda gruppen får replik.
+
+\subsection{Ordningsfråga}
+Debatt i ordningsfråga bryter debatt i sakfråga och skall avgöras innan debatt i sakfråga fortsätter.
+Ordningsfrågor kan lyftas utanför talordningen förutsatt att den enskilda personen får ordet.
+\subsection{Sakupplysning}
+Sakupplysning är en saklig fråga eller informativt utlåtande kring sakfrågan. Ifall sakupplysningen är en fråga behåller varje medlem rätten att begära replik för att svara på frågan.
+Sakupplysningar är alltid neutralt ställda till sakfrågan.
+\subsection{Streck i debatten}
+Enskild mötesmedlem kan begära streck i debatten.
+Detta kan göras utanför talordningen.
+Streck i debatten behandlas som en ordningsfråga. Bifalls yrkandet om streck i debatten av mötet skall den ansvarig för talarlistan justera denna.
+Därefter får endast de som står på listan yttra sig i sakfrågan och inga nya yrkanden i sakfrågan får framställas.
+Upphävande av streck i debatten behandlas även det som ordningsfråga.
+\section{Beslut och omröstning}
+Beslut av mötet görs via omröstning med enkel majoritet, om inget annat angetts. För giltigt beslut förutsätts antalet avgivna röster uppfylla kraven för beslutförhet enligt stadgarna. Diskussion om sakfråga är inte tillåtet under beslut. Begäran om röstningsförfarande görs utanför talordningen.
+\subsection{Acklamation}
+Detta röstningsförfarande används om inget annat begärs. Omröstning görs med ``JA''-rop. Mötesordförande avgör beslutets utfall. Annat röstningsförfarande kan begäras av mötesmedlem om det anses att mötesordförandes bedömning var felaktig.
+\subsection{Votering}
+Omröstning sker via handuppräckning. Rösträkning sker av mötesordförande. Röstränkning av rösträknare eller annat röstningsförfarande kan begäras av mötesmedlem om det anses att mötesordförandes bedömning var felaktig.
+\subsection{Sluten votering}
+Vid begäran av sluten votering skall det digitala röstsystemet VoteIT användas.
+Den senast godkända versionen av voteIT är
+\href{https://github.com/cthit/VoteIT/commit/cf666ee0e04b7f6b46ed3d1f4b320d0ef0f5e3f3}{cf666ee0e04b7f6b46ed3d1f4b320d0ef0f5e3f3}.
+Manuell sluten votering kan krävas av enskild mötesmedlem.
+\subsection{Kontrapropositionsvotering}
+Detta röstningsförfarande kan begäras då två eller fler alternativ står emot varandra. Alternativen tas upp parvis där förslaget med färst röster utesluts. Detta återupprepas tills endast ett kvarstår.
+\subsection{Klumpval}
+Då flertalet sakfrågor ska beslutas kan klumpval begäras av enskild mötesmedlem. Frågan om klumpval behandlas som en ordningsfråga.
+Vid personval kan klumpval endast beviljas då antalet nominerade är som mest lika stort som antalet platser
+
+\section{Sakfrågor}
+Denna punkt definierar vilka moment som tas upp för olika sakfrågor. Då de flesta sköts på samma vis detaljeras detta först, varpå undantag för vissa sakfrågor benämns.
+Ifall då sakfrågan inte infaller i någon av kategorierna nedan gör mötesordförande en bedömning om vilka moment sakfrågan ska innefatta.
+\subsection{Generella moment}
+De generella momenten som kan tas upp under sakfråga är
+\begin{itemize}
+        \item Framförande av dokument eller meddelande. I fallet av dokument framförs det av den som skickade in dokumentet, eller en representant för denne.
+        \item Frågor till den som framfört dokumentet eller meddelandet. Replik beviljas inte under frågor.
+        \item Framförande av svar från behörig part, om tillämpligt.
+        \item Frågor till behörig part, om tillämpligt.
+        \item Diskussion
+        \item Beslut, om tillämpligt. Vissa beslut innefattar endast förandet av dokument till möteshandlingarna
+\end{itemize}
+De olika sakfrågorna innefattar vanligtvis följande moment:
+\begin{itemize}
+    \item \textbf{Meddelanden:}
+    \begin{enumerate}
+        \item Framförande av meddelande.
+        \item Frågor till den som framfört meddelandet.
+    \end{enumerate}
+    \item \textbf{Interpellation:}
+    \begin{enumerate}
+        \item Framförande av fråga till sektionsstyrelsen.
+        \item Frågor till den som framfört frågan.
+        \item Framförande av svar från sektionsstyrelsen.
+        \item Frågor till sektionsstyrelsen.
+        \item Diskussion.
+    \end{enumerate}
+    \item \textbf{Frågor till mötet}
+    \begin{enumerate}
+        \item Framförande av fråga.
+        \item Diskussion.
+        \item Beslut, om tillämpligt.
+    \end{enumerate}
+    \item \textbf{Verksamhetsrapport:}
+    \begin{enumerate}
+        \item Framförande av dokument.
+        \item Frågor till den som framfört dokumentet.
+        \item Beslut.
+    \end{enumerate}
+    \item \textbf{Verksamhetsplan och budget:}
+    \begin{enumerate}
+        \item Framförande av dokument
+        \item Frågor till den som framfört dokumenten.
+        \item Diskussion
+        \item Beslut.
+    \end{enumerate}
+    \item \textbf{Revisionsberättelse:}
+    \begin{enumerate}
+        \item Framförande av dokument.
+        \item Frågor till den som framfört dokumentet.
+        \item Beslut.
+    \end{enumerate}
+    \item \textbf{Verksamhetsberättelse, ekonomisk berättelse, och ansvarsbefrielse:}
+    \begin{enumerate}
+        \item Framförande av dokument.
+        \item Frågor till den som framfört dokumenten.
+        \item Diskussion
+        \item Beslut.
+    \end{enumerate}
+    \item \textbf{Proposition:}
+    \begin{enumerate}
+        \item Framförande av proposition.
+        \item Frågor till den som framfört propositionen.
+        \item Diskussion
+        \item Beslut.
+    \end{enumerate}
+    \item \textbf{Motion:}
+    \begin{enumerate}
+        \item Framförande av motion.
+        \item Frågor till motionären.
+        \item Framförande av svar från sektionsstyrelsen.
+        \item Frågor till sektionsstyrelsen.
+        \item Diskussion
+        \item Beslut.
+    \end{enumerate}
+\end{itemize}
+\subsection{Frågor till mötet}
+Innan framförande och diskussion av respektive fråga får enskilda mötesmedlemmar möjlighet att presentera sin fråga och få den inlagd i dagordningen.
+\subsection{Interpellationer}
+Interpellationer är frågor till sektionsstyrelsen som sektionsstyrelsen måste svara på inför mötet.
+\subsection{Propositioner och motioner}
+Under diskussionen kan ändringsyrkanden presenteras.
+Dessa kan modifiera propositionen/motionen och hanteras på ett av två sätt:
+\begin{itemize}
+    \item Jämkning av: sektionsstyrelsen eller dess representant i fallet av en proposition, motionären eller dess representant i fallen av en motion; ändringen införs i propositionen/motionen.
+    \item Mötet röstar om ändringsyrkandet. Bifalls ändringen verkställs den i propositionen/motionen.
+\end{itemize}
+
+\subsection{Personval}
+Mötesmedlemmar har möjlighet att nominera sig själva eller andra. Efter detta görs följande för varje nominerad:
+\begin{enumerate}
+    \item Övriga nominerade blir ombedda att lämnar rummet med en representant från sektionsstyrelsen eller en mötesfunktionär.
+    \item Den nominerade presenterar sig själv kortfattat.
+    \item Mötet ställer frågor till de nominerade, individuellt eller i grupp. Mötesdeltagare kan
+kräva individuell frågeställning för en, flertal, eller resterande frågor.
+\end{enumerate}
+Då en som önskar nominera sig själv inte kan närvara på mötet kan denne nomineras
+och föredragas av en representant med förslagsrätt. Presentation kan ske (i minskande
+ordning av preferens):
+\begin{enumerate}[label=(\alph*)]
+    \item med färdigskriven text från den som önskar nominera sig;
+    \item med representantens egna ord; eller
+    \item genom video eller röstsamtal till den som önskar bli nominerad. Används detta alternativ bör representanten aggera mellanman för att säkerställa att mötet samt den som önskar bli nominerad kan höra och förstå varandra.
+\end{enumerate}
+Efter att samtliga nominerade presenterat sig ombeds de alla att lämna salen och följande sker:
+\begin{enumerate}
+    \item Valberedningen föredrar sina nomineringar och får möjligheten att göra utlåtanden om samtliga nominerade, om tillämpligt.
+    \item Mötet öppnar upp för frågor till Valberedningen, om tillämpligt.
+    \item Mötet öppnar upp för diskussion.
+    \item Mötet går till beslut.
+\end{enumerate}
+De nominerade bjuds tillbaka in till mötet efter beslut är taget, eller då sluten votering används. Används sluten votering har även de nominerade rösträtt. Det är inte tillåtet för nominerade att befinna sig i salen under:
+\begin{itemize}
+    \item presentationen av andra nominerade,
+    \item diskussion, eller
+    \item röstningsförfarande annat än sluten votering.
+\end{itemize}
+Det är tillika otillåtet för mötesdeltagare att delge vad som sker under dessa steg till nominerade, eller fortsätta diskussion under beslut.
+\end{document}
