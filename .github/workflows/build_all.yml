@@ -25,7 +25,6 @@ jobs:
     with:
       document_name: bokningsvillkor
       latex_build_entry: bokningsvillkor/bokningsvillkor.tex
-      build_working_directory: bokningsvillkor
 
   ###### Policies ######
   ekonomisk_policy:

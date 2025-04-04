@@ -1,3 +1,3 @@
 [submodule "bokningsvillkor"]
 	path = bokningsvillkor
-	url = https://github.com/cthit/bokningsvillkor
+	url = git@github.com:cthit/bokningsvillkor.git
