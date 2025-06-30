@@ -1,0 +1,44 @@
+\documentclass[11pt, includeaddress]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+
+\renewcommand{\thesection}{\S \arabic{section}}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Projektgrupper}
+%\approved{2024--02--22}
+%\revisioned{2025--05--15}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\makeheadfoot%
+
+%Rubriksnivådjup
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Additional subparagraph levels
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+
+%Sidnumreringsstart
+\setcounter{page}{1}
+
+\tableofcontents
+
+\newpage
+\input{stoddokument/projektgrupper/bil} % Förord
+
+\end{document}

@@ -169,6 +169,12 @@ jobs:
       document_name: nyckelkontrakt
       latex_build_entry: stoddokument/nyckelkontrakt.tex
 
+  projektgrupper:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: projektgrupper
+      latex_build_entry: stoddokument/projektgrupper/projektgrupper.tex
+
   ###### Hedersmedlemmar ######
   anette:
     uses: ./.github/workflows/build_document.yml
