@@ -62,7 +62,7 @@ jobs:
           rm -rf pdfs
 
       - name: Install, build and upload site output
-        uses: withastro/action@v3
+        uses: withastro/action@v6
         with:
           path: site
           package-manager: pnpm@latest # Should probably be gotten from dokument-site repo instead.
