@@ -65,7 +65,7 @@ jobs:
         uses: withastro/action@v6
         with:
           path: site
-          package-manager: pnpm@latest # Should probably be gotten from dokument-site repo instead.
+          package-manager: pnpm@10.34.4 # Should always match the expected version from the dokument-site repo.
 
       - name: Deploy to GitHub Pages
         id: deployment
