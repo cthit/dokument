@@ -1,0 +1,60 @@
+name: Build and Publish PDF
+
+on:
+  workflow_call:
+    inputs:
+      document_name:
+        required: true
+        type: string
+      latex_build_entry:
+        required: true
+        type: string
+      build_working_directory:
+        required: false
+        type: string
+      category_slug:
+        required: true
+        type: string
+      document_slug:
+        required: true
+        type: string
+
+jobs:
+  build:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: ${{ inputs.document_name }}
+      latex_build_entry: ${{ inputs.latex_build_entry }}
+      build_working_directory: ${{ inputs.build_working_directory }}
+
+  publish:
+    name: Publish PDF
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Get PDF
+        id: download
+        uses: actions/download-artifact@v8
+        with:
+          name: ${{ inputs.document_name }}
+
+      - name: Save PDF path
+        id: find
+        run: 'echo "path=${{ steps.download.outputs.download-path }}/${{ inputs.document_name }}.pdf" >> "$GITHUB_OUTPUT"'
+
+      - name: Install pdfgrep
+        run: sudo apt install -y pdfgrep
+
+      - name: Find revised at date
+        id: revised_at
+        # Note: Revision dates use en-dashes
+        run: 'echo "revised_at=$(pdfgrep -iPe ''(?<=Reviderad: )\d{4}[–-]\d{2}[–-]\d{2}'' ''${{ steps.find.outputs.path }}'' -o| sed ''s/–/-/g'')" >> $GITHUB_OUTPUT'
+
+      - name: Publish PDF
+        uses: olillin/publish-docs-action@v1
+        with:
+          path: ${{ steps.find.outputs.path }}
+          category_slug: ${{ inputs.category_slug }}
+          document_slug: ${{ inputs.document_slug }}
+          revised_at: ${{ steps.revised_at.outputs.revised_at }}
+          ignore_conflicts: true
