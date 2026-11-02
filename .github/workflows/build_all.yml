@@ -39,6 +39,12 @@ jobs:
       document_name: lokalpolicy
       latex_build_entry: policies/lokalpolicy/lokalpolicy.tex
 
+  lokalpolicy_the_cloud:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: lokalpolicy_the_cloud
+      latex_build_entry: policies/lokalpolicy_the_cloud/lokalpolicy_the_cloud.tex
+
   mjukvarupolicy:
     uses: ./.github/workflows/build_document.yml
     with:
