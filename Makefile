@@ -22,6 +22,7 @@ reglemente: reglemente/reglemente.tex
 policies: policies/
 	$(latexmk) $<ekonomisk_policy/ekonomisk_policy.tex
 	$(latexmk) $<lokalpolicy/lokalpolicy.tex
+	$(latexmk) $<lokalpolicy_the_cloud/lokalpolicy_the_cloud.tex
 	$(latexmk) $<mjukvarupolicy/mjukvarupolicy.tex
 	$(latexmk) $<kommunikationspolicy/kommunikationspolicy.tex
 	$(latexmk) $<uppforandepolicy/uppforandepolicy.tex
