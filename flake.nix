@@ -16,7 +16,7 @@
           gnumake
           (texlive.combine {
             # Some packages may be duplicated from the medium scheme
-            inherit (texlive) scheme-medium latexmk babel changepage enumitem etoolbox fancyhdr float fontspec forloop geometry hyperref l3packages lastpage parskip pdfpages pgf readarray stringstrings titlesec verbatimbox;
+            inherit (texlive) scheme-medium latexmk babel changepage enumitem etoolbox fancyhdr float fontspec forloop geometry hyperref l3packages lastpage parskip pdfpages pgf readarray stringstrings titlesec verbatimbox todonotes;
           })
         ];
       };
