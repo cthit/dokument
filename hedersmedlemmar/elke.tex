@@ -1,0 +1,62 @@
+\documentclass[11pt, noincludeaddress, nopagination]{classes/cthit}
+\usepackage{titlesec}
+\usepackage{verbatimbox}
+\usepackage{tabularx}
+\usepackage{pgfkeys}
+
+\newcommand{\sign}[4]{%      
+  \begin{tabular}[t]{@{}l@{}}
+  \makebox[6.5cm]{\dotfill}\\
+  \strut#1\strut \\
+  \strut#2\strut \\
+  \strut#3\strut \\
+  \strut#4\strut \\
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}p{1.5in}@{}}
+  \\[-2ex]
+  \strut Date: \dotfill\strut
+  \end{tabular}%
+}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Hedersmedlemskapsdiplom}
+
+\makeheadfoot%
+
+\makesimpletitle
+\begin{center}
+\textbf{\Huge{Elke Mangelsen}}
+\end{center}
+\vspace{1cm}
+\subsection*{}
+Härmed intygas att Elke Mangelsen 2026-10-07 utnämnts till hedersmedlem vid Teknologsektionen Informationsteknik på Chalmers Tekniska Högskola med följande motivering:
+\\
+\\
+\textit{
+``Elke Mangelsen väljs till hedersmedlem av sektionen för hela tolv års tjänst som utbildningssekreterare, under vilken hon både har bidragit till att utveckla utbildningen, och samtidigt har varit en trygg punkt för studenterna. Även genom perioder med stora förändringar i programledningen har hon alltid haft en bra kontakt med studenterna, och uppmanat dem att ha en bra balans mellan studier och fritid. Elke gjorde alltid mer än vad som förväntades av hennes roll: det var hon som höll ihop programmet genom att ensam agera både utbildningssekreterare, studievägledare och programansvarig under en särskilt instabil tid.''
+}
+\\
+
+En hedersmedlem är en person som synnerligen främjat teknologsektionens intressen och strävanden. Hos Teknologsektionen Informationsteknik har tidigare endast fyra personer utnämnts till hedersmedlemmar under sektionens hela 25 år.
+
+\vspace{3cm} 
+
+\noindent
+  \begin{minipage}[t]{0.5\linewidth}
+    \raggedright
+    \sign{Joakim Lindström}{Ordförande}{Teknologsektionen Informationsteknik}{Chalmers Studentkår}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.5\linewidth}
+  \sign{Ort \& datum}{}{}{}
+  \end{minipage}
+
+\end{document}

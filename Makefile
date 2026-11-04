@@ -56,6 +56,8 @@ hedersmedlemmar: hedersmedlemmar/
 	$(latexmk) $<anette.tex
 	$(latexmk) $<wolfgang.tex
 	$(latexmk) $<samuel.tex
+	$(latexmk) $<niklas.tex
+	$(latexmk) $<elke.tex
 
 copy:
 	cp -n ./build/**/*.pdf ./build/output

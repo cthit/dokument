@@ -205,3 +205,9 @@ jobs:
     with:
       document_name: niklas
       latex_build_entry: hedersmedlemmar/niklas.tex
+
+  elke:
+    uses: ./.github/workflows/build_document.yml
+    with:
+      document_name: elke
+      latex_build_entry: hedersmedlemmar/elke.tex
