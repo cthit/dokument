@@ -12,6 +12,9 @@ on:
       build_working_directory:
         required: false
         type: string
+      artifact_name:
+        required: false
+        type: string
 
 jobs:
   build-document:
@@ -31,5 +34,5 @@ jobs:
       - name: Upload PDF
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ inputs.document_name }}
+          name: ${{ inputs.artifact_name || inputs.document_name }}
           path: ${{ inputs.document_name }}.pdf

@@ -1,0 +1,51 @@
+name: Publish documents to Docs
+
+on:
+  push:
+    branches:
+      - master
+      - feat/new-docs-workflow # FOR TESTING PURPOSES, REMOVE BEFORE MERGING
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  stadga:
+    uses: ./.github/workflows/publish_document.yml
+    with:
+      document_name: stadga
+      latex_build_entry: stadga/stadga.tex
+      category_slug: operational-documents
+      document_slug: bylaws
+
+  reglemente:
+    uses: ./.github/workflows/publish_document.yml
+    with:
+      document_name: reglemente
+      latex_build_entry: reglemente/reglemente.tex
+      category_slug: operational-documents
+      document_slug: bylaws
+
+  ekonomisk_policy:
+    uses: ./.github/workflows/publish_document.yml
+    with:
+      document_name: ekonomisk_policy
+      latex_build_entry: policies/ekonomisk_policy/ekonomisk_policy.tex
+      category_slug: policies
+      document_slug: financial-policy
+
+  miljopolicy:
+    uses: ./.github/workflows/publish_document.yml
+    with:
+      document_name: miljopolicy
+      latex_build_entry: policies/miljopolicy/miljopolicy.tex
+      category_slug: policies
+      document_slug: environmental-policy
+
+  kommunikationspolicy:
+    uses: ./.github/workflows/publish_document.yml
+    with:
+      document_name: kommunikationspolicy
+      latex_build_entry: policies/kommunikationspolicy/kommunikationspolicy.tex
+      category_slug: policies
+      document_slug: communication-policy
